@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hexo || </title>
+    <title>Hexo || Function(javaScript)</title>
     <meta name="author" content="John Doe">
     <meta name="description" content=" ">
     <meta name="keywords" content=" ">
@@ -165,48 +165,13 @@
                 </div>
 
                 <div id="main">
-                    <div id="home-head" style=background-image:url('home.jpg')>
-    <script>
-        var menu = document.getElementById("menu")
-        menu.className += " menu-color"
-    </script>
-     
-    <div id="home-info" class="home-info" @click="home_click">
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="info">
-            <div class="wrap">
-                <h1>Hexo</h1>
-                <h3></h3>
-                <h5></h5>
-            </div>
-        </span>
+                     
+<link rel="stylesheet" href="/css/post-body.css">
+<div class="article">
+    <div>
+        <h1>Function(javaScript) </h1>
     </div>
-     
-</div>
-
-
-
-<div id="home-posts-wrap" class=>
-    <div id="home-posts">
-
-        <div id="posts">
-            
-
-<div class="post">
-
-    <a href="/2021/11/26/postName/">
-        <h2>
-            Function(javaScript)
-        </h2>
-    </a>
-
-    <div class="category-and-date">
-
-        
-
+    <div class="info">
         <span class="date">
             <span class="icon">
                 <a-icon type="calendar" theme="filled" />
@@ -214,13 +179,13 @@
             2021/11/26
         </span>
 
+        
+
+        
     </div>
 
-    <div class="excerpt">
-        <div class="content" v-pre>
-            
-            
-            <p>函数的概念及优势<br>概念：简单来说就是封装了一段可被重复执行调用的代码块，是JavaScript编程的基础。<br>优势：让大量代码重复使用，减少重复，同时使子程序间相互隔离。</p>
+    <div class="content" v-pre>
+        <p>函数的概念及优势<br>概念：简单来说就是封装了一段可被重复执行调用的代码块，是JavaScript编程的基础。<br>优势：让大量代码重复使用，减少重复，同时使子程序间相互隔离。</p>
 <p>函数的使用（声明、调用）<br>一. 函数的声明：（两种）<br>1.function 函数名（）{<br>函数体代码<br>}<br>2.var 函数名 = function（）{<br>函数体代码<br>}<br>注：1.function为函数关键词，小写<br>2.函数名一般命名为动词，如getResult<br>3.括号内为形参，若有多个用逗号分开</p>
 <p>二 .函数的调用：<br>函数名（ ）；<br>注：1.只有调用函数才会执行函数体代码<br>2.括号内为实参，若有多个用逗号分开</p>
 <p>函数的封装：<br>把一个或者多个功能通过函数的方式封装起来，对外只提供一个简单的函数接口<br>（简单理解：将电脑配件整合组装到机箱中）</p>
@@ -240,162 +205,13 @@
 <p>副作用与纯函数<br>一 .函数副作用<br>当调用函数时，除了返回函数值之外，还对主调用函数产生附加的影响。（如修改了一个变量、改变数据结构、出现异常或终止、读取一个文件等）<br>这会降低程序可行性，带来不必要的麻烦。</p>
 <p>二 .纯函数<br>一种特定的产生值的函数。函数与外界交换数据只有一个唯一渠道——参数和返回值<br>优势：1.无副作用，不依赖于其他代码产生的副作用<br>2.当使用相同参数调用时，总是生成相同的值（只要参数不变，函数的值始终不变）<br>3.可以通过简单的调用来测试它</p>
 
-            
-        </div>
     </div>
 
-    <div class="post-tags">
-        
-        
-    </div>
-
-    <a href="/2021/11/26/postName/ " class="go-post">
-        阅读全文
-    </a>
-</div>
-
-<div class="post">
-
-    <a href="/2021/10/17/hello-world/">
-        <h2>
-            Hello World
-        </h2>
-    </a>
-
-    <div class="category-and-date">
-
-        
-
-        <span class="date">
-            <span class="icon">
-                <a-icon type="calendar" theme="filled" />
-            </span>
-            2021/10/17
-        </span>
-
-    </div>
-
-    <div class="excerpt">
-        <div class="content" v-pre>
-            
-            
-            <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-            
-        </div>
-    </div>
-
-    <div class="post-tags">
-        
-        
-    </div>
-
-    <a href="/2021/10/17/hello-world/ " class="go-post">
-        阅读全文
-    </a>
-</div>
-
-
-             
-<div class="page-current">
-
-    <div class="prev">
-        
-    </div>
-
-    <div class="page-index">
-
-        
-
-        <span class="current">
-            1
-        </span>
-
-        
-
-    </div>
-
-    <div class="next">
-        
-    </div>
-
-</div>
-
-        </div>
-    </div>
     
-    <div id="home-card">
-        <a-affix :offset-top="card_top">
-    <a-card class="card-style" style="width: 300px">
-        <div class="avatar">
-            <img src="images/avatar.png " alt="头像">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <div id="comment">
+        <div id="gitalk-container">
         </div>
-        <div class="name">
-            John Doe
-        </div>
-        <div class="descriptions">
-            
-            <div class="description">
-                正しさなんてもの
-            </div>
-            
-            <div class="description">
-                人のモノサシによって変わる
-            </div>
-            
-        </div>
-        <div class="icon-links">
-            
-            <span class="icon-link">
-                <a target="_blank" rel="noopener" href="https://github.com/korilin">
-
-                    
-                    <a-icon type="github"
-                        theme="filled" />
-                    
-                </a>
-            </span>
-            
-            <span class="icon-link">
-                <a target="_blank" rel="noopener" href="https://twitter.com/korilin_dev">
-
-                    
-                    <a-icon type="twitter"
-                        theme="" />
-                    
-                </a>
-            </span>
-            
-        </div>
-        <div class="friend-links">
-            
-            <div class="friend-link">
-                <a target="_blank" rel="noopener" href="https://en.korilin.com">
-                    英文技术博客
-                </a>
-            </div>
-            
-            <div class="friend-link">
-                <a target="_blank" rel="noopener" href="https://jp.korilin.com">
-                    日语记录博客
-                </a>
-            </div>
-            
-        </div>
-    </a-card>
-</a-affix>
     </div>
     
 </div>
@@ -461,6 +277,21 @@
             }
         }
     })
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: 'hexo-theme-particle',      // The repository of store comments,
+        owner: 'korilin',
+        admin: ['korilin'],
+        language: 'en',
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: true  // Facebook-like distraction free mode
+    })
+    gitalk.render('gitalk-container')
 </script>
 
 </body>
