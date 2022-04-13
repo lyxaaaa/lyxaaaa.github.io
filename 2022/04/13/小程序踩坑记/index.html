@@ -165,75 +165,45 @@
                 </div>
 
                 <div id="main">
-                    
-<div id="archives">
-    
-    <a-timeline>
-        <a-timeline-item timestamp="2022/4/13" placement="top" color="#a5c2f5">
-            <a-card hoverable>
-                <div class="item-time">2022/4/13</div>
-                <a href="/2022/04/13/小程序踩坑记/">
-                    <h3></h3>
-                </a>
-                <div class="info">
-                    
+                     
+<link rel="stylesheet" href="/css/post-body.css">
+<div class="article">
+    <div>
+        <h1> </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2022/4/13
+        </span>
 
-                    
-                </div>
-            </a-card>
-        </a-timeline-item>
-    </a-timeline>
-    
-    <a-timeline>
-        <a-timeline-item timestamp="2022/3/18" placement="top" color="#a5c2f5">
-            <a-card hoverable>
-                <div class="item-time">2022/3/18</div>
-                <a href="/2022/03/18/关于http/">
-                    <h3></h3>
-                </a>
-                <div class="info">
-                    
+        
 
-                    
-                </div>
-            </a-card>
-        </a-timeline-item>
-    </a-timeline>
-    
-    <a-timeline>
-        <a-timeline-item timestamp="2021/11/26" placement="top" color="#a5c2f5">
-            <a-card hoverable>
-                <div class="item-time">2021/11/26</div>
-                <a href="/2021/11/26/postName/">
-                    <h3>Function(javaScript)</h3>
-                </a>
-                <div class="info">
-                    
+        
+    </div>
 
-                    
-                </div>
-            </a-card>
-        </a-timeline-item>
-    </a-timeline>
-    
-    <a-timeline>
-        <a-timeline-item timestamp="2021/10/17" placement="top" color="#a5c2f5">
-            <a-card hoverable>
-                <div class="item-time">2021/10/17</div>
-                <a href="/2021/10/17/hello-world/">
-                    <h3>Hello World</h3>
-                </a>
-                <div class="info">
-                    
+    <div class="content" v-pre>
+        <h2 id="一-react错误-Minified-React-error-185"><a href="#一-react错误-Minified-React-error-185" class="headerlink" title="一 react错误 Minified React error #185;"></a>一 react错误 Minified React error #185;</h2><p>原因：render函数不能使用setState()，否则会导致页面死循环<br><img src="https://img-blog.csdnimg.cn/02f0c6e3889d418395ef9a0fb467425a.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5biM55-jYQ==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="摘录"><br>上图摘自其他博主</p>
+<h2 id="二-有关Taro-showToast"><a href="#二-有关Taro-showToast" class="headerlink" title="二 有关Taro.showToast"></a>二 有关Taro.showToast</h2><p>如果只写title的话，最多只展示7个文字<br>如果再加      icon：‘none’    此时 title 文本最多可显示两行<br><img src="https://img-blog.csdnimg.cn/099542250aec4ae19717f7d42ff47c01.png" alt="示例代码"></p>
+<h3 id="既然提到taro了，再插一句：发现表单组件的Input-居然没有-onChange-事件"><a href="#既然提到taro了，再插一句：发现表单组件的Input-居然没有-onChange-事件" class="headerlink" title="既然提到taro了，再插一句：发现表单组件的Input 居然没有 onChange 事件"></a>既然提到taro了，再插一句：发现表单组件的Input 居然没有 onChange 事件</h3><h2 id="三-小程序记住账户密码功能"><a href="#三-小程序记住账户密码功能" class="headerlink" title="三 小程序记住账户密码功能"></a>三 小程序记住账户密码功能</h2><p>效果：用户一扫码登录，自动显示    账户     密码（小黑圈显示），类似QQ的记住密码。<img src="https://img-blog.csdnimg.cn/02836374f46249d5aebb4594b46dc4b1.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5biM55-jYQ==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="示例代码"><br>实现：用户初次登录，拿到学号密码存入本地缓存（通过Taro.setStorage实现），此时生成用户的token，也存入本地缓存。<br>此后再登录，直接判断if（token）就可以，如果是真，直接页面跳转，否则显示弹窗。<br>那么如何实现记住账户密码呢？<br>代码如上，在react类组件的生命周期函数中setstate，值来源于本地缓存中的student—id 与 password  。在render函数中，input组件的value值（而不是placeholder）也设为student—id 与 password 。</p>
+<h2 id="四-对数组中不同类元素进行不同操作"><a href="#四-对数组中不同类元素进行不同操作" class="headerlink" title="四 对数组中不同类元素进行不同操作"></a>四 对数组中不同类元素进行不同操作</h2><h5 id="实现：首先用map方法遍历数组，再进行if-else判断是否同类，最后return，在页面上展示数据"><a href="#实现：首先用map方法遍历数组，再进行if-else判断是否同类，最后return，在页面上展示数据" class="headerlink" title="实现：首先用map方法遍历数组，再进行if else判断是否同类，最后return，在页面上展示数据"></a>实现：首先用map方法遍历数组，再进行if else判断是否同类，最后return，在页面上展示数据</h5><p>array.map((item) =&gt; {<br>    if(item.name==’1’){<br>        return()<br>    }else{<br>    return()<br>}<br>})</p>
+<p>如上代码在jsx的render函数中<br>效果：类似QQ聊天框，name为1的人发送的消息显示在左边，气泡浅色；name不是1的人发送的消息显示在右边，气泡深色。</p>
+<h2 id="五-函数之间的传参"><a href="#五-函数之间的传参" class="headerlink" title="五 函数之间的传参"></a>五 函数之间的传参</h2><p>假设有a b两个函数，现在a函数return一个值为m，b函数想接收到这个m值<br>实现：function a（）{<br>    。。。。<br>    return{<br>        m<br>}<br>}</p>
+<p>function b（）{<br>    var xx = this.a;<br>    console.log(xx.m);<br>}<br>此时b函数输出的即为m值<br><img src="https://img-blog.csdnimg.cn/1e3d4b12949347138a5f19a02f6d97b3.png" alt="示例代码"></p>
+<h2 id="六-点击发送键，即可发送消息"><a href="#六-点击发送键，即可发送消息" class="headerlink" title="六 点击发送键，即可发送消息"></a>六 点击发送键，即可发送消息</h2><h5 id="实现：在constructor函数里面初始化state，声明一个数组msglist，此后每点击一次发送键，就利用一次数组的push方法"><a href="#实现：在constructor函数里面初始化state，声明一个数组msglist，此后每点击一次发送键，就利用一次数组的push方法" class="headerlink" title="实现：在constructor函数里面初始化state，声明一个数组msglist，此后每点击一次发送键，就利用一次数组的push方法"></a>实现：在constructor函数里面初始化state，声明一个数组msglist，此后每点击一次发送键，就利用一次数组的push方法</h5><p><img src="https://img-blog.csdnimg.cn/a9a366cfa0cc4d42b53a7b27d6ae9f80.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5biM55-jYQ==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="示例代码"></p>
+<h5 id="注意：这里多加了一个copy，否则会报错，应该是内置原生js的性能，具体不清楚"><a href="#注意：这里多加了一个copy，否则会报错，应该是内置原生js的性能，具体不清楚" class="headerlink" title="注意：这里多加了一个copy，否则会报错，应该是内置原生js的性能，具体不清楚"></a>注意：这里多加了一个copy，否则会报错，应该是内置原生js的性能，具体不清楚</h5>
+    </div>
 
-                    
-                </div>
-            </a-card>
-        </a-timeline-item>
-    </a-timeline>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <div id="comment">
+        <div id="gitalk-container">
+        </div>
+    </div>
     
 </div>
-
                      
 <footer id="footer">
     <div class="footer-wrap">
@@ -296,6 +266,21 @@
             }
         }
     })
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: 'hexo-theme-particle',      // The repository of store comments,
+        owner: 'korilin',
+        admin: ['korilin'],
+        language: 'en',
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: true  // Facebook-like distraction free mode
+    })
+    gitalk.render('gitalk-container')
 </script>
 
 </body>
