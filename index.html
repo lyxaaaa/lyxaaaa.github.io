@@ -197,6 +197,69 @@
 
 <div class="post">
 
+    <a href="/2022/05/07/JavaScript垃圾回收/">
+        <h2>
+            
+        </h2>
+    </a>
+
+    <div class="category-and-date">
+
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2022/5/7
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            
+            <h2 id="js垃圾回收"><a href="#js垃圾回收" class="headerlink" title="js垃圾回收"></a>js垃圾回收</h2><h2 id="一什么是垃圾"><a href="#一什么是垃圾" class="headerlink" title="一什么是垃圾"></a>一什么是垃圾</h2><p>从生活中的角度可知，垃圾，就是人们不再需要的东西。在js中也一样，垃圾就是不再需要的变量。js通过自动内存管理实现内存分配和闲置资源回收，基本思路就是确定哪个变量不会再被用到了，就释放它占用的内存。</p>
+<p><strong>全局变量</strong><br>在全局作用域下声明的变量都不是垃圾，因为你有可能再次使用到<br>比如在全局作用域下 var m=3<br>可能一开始m变量不会被用到，但在写多行代码后用到m，这时m就存在被用到的可能性，所以在js中不会被当做垃圾回收<br><strong>局部变量</strong><br>例子 function fn(）{<br>  var b=2;<br>  console.log(b);<br>}<br>当fn函数执行时，会创建b变量，栈（或堆）内存会分配空间以保存相应的值。如果fn多次执行，且每次的变量b都不会被回收的话，是不是会产生很多的变量b，这样明显是不合理的。<br>所以局部变量在函数执行完后变成垃圾会被回收<br><strong>单引用</strong><br> let a=1；<br>let a=null；<br>一开始变量a开辟的内存空间存放1 ，但当值为null时，空间就没有作用了，变成垃圾被回收<br><strong>双引用</strong><br>let fruit={<br> name:”apple”<br>}；<br>let food = fruit;<br>在windows上定义一个对象fruit，具有name属性。之后定义一个food变量指向fruit的内存空间。<br>这时如果想清除这片开辟的内存空间，就必须把fruit和food两个变量都清除，垃圾才能被回收干净<br><strong>环引用</strong><br>function marry(man, woman) {<br>  woman.husband = man;<br>  man.wife = woman;</p>
+<p>  return {<br>    father: man,<br>    mother: woman<br>  }<br>}</p>
+<p>let family = marry({<br>  name: “John”<br>}, {<br>  name: “Ann”<br>});<br><img src="https://img-blog.csdnimg.cn/c44df59c7f9a4ab59a0b157055c5cce1.png" alt="在这里插入图片描述"></p>
+<p>在一个family中，如果只去掉father和husband，此时name：“john”还存在，因为还存在wife可以引用john（即箭头指向）。<br>只有将所有指向该变量的对象清除才能够将该变量作为垃圾处理</p>
+<h2 id="二标记清理"><a href="#二标记清理" class="headerlink" title="二标记清理"></a>二标记清理</h2><p>标记清理是 js 中最常用的垃圾回收策略：当变量进入上下文，如在函数中声明一个变量时，这个变量会被加上存在于上下文中的标记。当变量离开上下文时，也会被加上离开上下文的标记。<br>垃圾回收程序运行：</p>
+<ul>
+<li>首先将内存中所有的变量标记好</li>
+<li>然后去掉   还在上下文中的变量  或者  被还在上下文中变量引用的变量  的标记，此时还有标记的就是要被删除的</li>
+<li>随后垃圾回收程序做一次内存清理，销毁带标记的所有值并收回它们的内存</li>
+</ul>
+<p> 给变量加标记的方法有很多。比如，当变量进入上下文时，反转某一位；或者可以维护“在上下文中”和“不在上下文中”两个变量列表，可以把变量从一个列表转移到另一个列表。</p>
+<h2 id="三引用计数"><a href="#三引用计数" class="headerlink" title="三引用计数"></a>三引用计数</h2><p>这是一种没那么常用的垃圾回收策略，思路是对每个值都记录它被引用的次数，当引用次数为0时变量就会被垃圾回收程序清理。<br>let obj1 = {name: ‘张三’};  // 创建对象（称其为 a），给 obj1 赋值，则其引用次数为1<br>let obj2 = obj1;  // a 的引用次数为 2</p>
+<p>obj1 = null;  // a 的引用次数为 1<br>obj2 = null;  // a 的引用次数为 0，此时 a 就可以被垃圾回收了</p>
+<p>声明一个变量并给它赋一个引用值时，引用数为1；如果同一个值又被赋给另一个变量，引用数加1；类似的，如果保存对该值引用的变量被其他值覆盖了，引用数减1</p>
+<p>问题：<strong>循环引用</strong><br>function f() {<br>    let obj1 = {};<br>    let obj2 = {};<br>    obj1.a=obj2;<br>    obj2.a=obj1;<br>}<br>此时obj1和obj2通过各自的a属性相互引用，两者引用数都是2，当f函数执行完毕后，在引用技术策略下obj1和obj2还存在，因为它们的引用数永远不会变成0<br>要解决这个问题，最好就是在不使用它们的时候将其设为 null </p>
+<h2 id="四前端垃圾回收的特殊性"><a href="#四前端垃圾回收的特殊性" class="headerlink" title="四前端垃圾回收的特殊性"></a>四前端垃圾回收的特殊性</h2><p>对于前端而言，不仅有 js 进程，还有 DOM 进程。</p>
+<p><strong>（1）使用 remove 清除掉 dom 元素</strong><br>（remove() 方法移除被选元素，包括所有文本和子节点）<br>let div=document.getElementById(‘root’);<br>div.onclick=function(){};<br>div.remove();<br>console.log(div.onclick);            //f(){}</p>
+<p>可见onclick未被清除掉</p>
+<p><strong>（2）将其变为 null</strong><br>let div=document.getElementById(‘root’);<br>let div2=document.getElementById(‘root’);<br>div.onclick=function(){};<br>div=null;<br>console.log(div2.onclick);//f(){}</p>
+<p>可见onclick也还未被清除掉。<br>但此时打印div.onclick会报错，因为此时div已经为null了</p>
+<p><strong>（3）同时使用 remove 和 null</strong><br>let div=document.getElementById(‘root’);<br>let div2=document.getElementById(‘root’);<br>div.onclick=function(){};<br>div=null;<br>div.remove();<br>console.log(div2.onclick);//null</p>
+<p>可以看出这个 onclick 事件被清除掉了。所以对于前端而言，不仅要清除 js 进程，还要清除 dom 进程。</p>
+
+            
+        </div>
+    </div>
+
+    <div class="post-tags">
+        
+        
+    </div>
+
+    <a href="/2022/05/07/JavaScript垃圾回收/ " class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+
     <a href="/2022/04/13/小程序踩坑记/">
         <h2>
             
