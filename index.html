@@ -197,6 +197,68 @@
 
 <div class="post">
 
+    <a href="/2022/10/02/浏览器页面的阻塞渲染/">
+        <h2>
+            
+        </h2>
+    </a>
+
+    <div class="category-and-date">
+
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2022/10/2
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            
+            <h2 id="浏览器关键渲染路径"><a href="#浏览器关键渲染路径" class="headerlink" title="浏览器关键渲染路径"></a>浏览器关键渲染路径</h2><p>这部分主要是，浏览器通过网络模块加载得到到HTML文件后的渲染流程<br><img src="https://cdn.nlark.com/yuque/0/2022/png/32453655/1664677108643-9943bc60-c49b-4508-9ddb-95529355c0ac.png#clientId=u7c50e314-48f6-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u190747ae&margin=%5Bobject%20Object%5D&originHeight=191&originWidth=927&originalType=url&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u8feadf4f-a628-4901-b5ef-e5401efcf63&title="></p>
+<p>首先浏览器拿到从服务端返回的html文件是由一堆字节构成的，随后转化为字符，即人能看懂的html代码。再转化为token，就像是符号标签。这里主要依赖html中标签的 &lt; 和 &gt; ，比如<body>是开始标签，</body>是结束标签。这样字符就被token化，不同字符就有了不同意义。下一步就是把token转化为节点对象，构建dom树。<br><img src="https://cdn.nlark.com/yuque/0/2022/png/32453655/1664677723783-0c7136e1-a7a3-4f64-a7a4-9f91067f5b03.png#clientId=u7c50e314-48f6-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=316&id=u21a9ec5e&margin=%5Bobject%20Object%5D&name=image.png&originHeight=401&originWidth=914&originalType=binary&ratio=1&rotation=0&showTitle=false&size=135937&status=done&style=none&taskId=u1fdb0fd0-7139-4446-9d23-4fbb0d5586f&title=&width=721.2000122070312" alt="image.png"></p>
+<p>其实返回的css文件的转化也类似，即字节到字符到token到节点，但最后一步是到CSSOM。CSSOM树，与DOM树结构相似，只是另外为每一个节点关联了样式信息。</p>
+<p>但CSSOM 和 DOM有一些区别，其中一个就是DOM可部分解析，而CSSDOM不能。试想<code>body&#123;font-size:16px;&#125;</code>又设置了<code>body div&#123;font-size:32px;&#125;</code>就会导致部分解析时字号为16px，造成页面样式混乱。</p>
+<p>DOM 和 CSSOM的结合即为渲染树，任务就是匹配DOM 和 CSSOM的节点，并且捕获可见内容。（比如有的标签<meta><link>等不会显示出来，CSSOM中设置display：none也不会显示）</p>
+<p>布局：获取渲染树的结构，节点的位置大小，依据盒子模型，盒子（对应节点）在页面上排列嵌套。简单说，就是把每个节点放到正确的位置。</p>
+<p>绘制：遍历渲染树绘制所有节点，为每一个节点适用对应的样式，这一过程是通过UI后端模块完成。</p>
+<h2 id="浏览器的阻塞渲染"><a href="#浏览器的阻塞渲染" class="headerlink" title="浏览器的阻塞渲染"></a>浏览器的阻塞渲染</h2><h3 id="CSS阻塞"><a href="#CSS阻塞" class="headerlink" title="CSS阻塞"></a>CSS阻塞</h3><p>注意：只有link引入的外部css才能产生阻塞；不阻塞DOM的解析<br>主要阻塞DOM树渲染以及后面js语句的执行</p>
+<link href="index.css" rel="stylesheet">
+<link href= "print.css" rel="stylesheet" media="print">
+<link href="other.css" rel="stylesheet" media="(min-width: 30em) and (orientation: landscape)">
+
+<p>第一个会加载并阻塞；<br>第二个只在打印的时候会加载但不阻塞；<br>第三个提供了媒体查询，会在符合条件时阻塞渲染。</p>
+<p>有时可以利用这种阻塞，避免闪屏。原因：比如style标签里面的css不阻塞渲染，导致CSS很可能在渲染结束后生效，若渲染结束时CSS和后边新生效的CSS不同，那很显然会改变显示效果。</p>
+<h3 id="js阻塞"><a href="#js阻塞" class="headerlink" title="js阻塞"></a>js阻塞</h3><p>js会阻塞DOM树的解析和渲染，以及后面js语句的执行</p>
+<p>阻塞dom解析：如果浏览器把后续dom节点加载完，而js若把dom节点删除，浏览器就做了无用功。浏览器无法预估脚本里面具体做了什么操作，例如像document.write 这种操作，索性全部停住，等脚本执行完了，浏览器再继续向下解析DOM。    </p>
+<p>阻塞dom渲染：js可以操作dom也可以修改节点样式，为避免出现差错，就等js执行完再渲染。</p>
+<p>阻塞后续js执行：js语句之间可能有依赖关系。</p>
+<h3 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h3><ul>
+<li> CSS的解析和JS的执行是互斥的（互相排斥），CSS解析的时候JS停止执行，JS执行的时候CSS停止解析。</li>
+<li> CSS阻塞和JS阻塞都不会阻塞浏览器加载外部资源（图片、视频、样式、脚本等）。原因：浏览器始终处于一种：“先把请求发出去” 的工作模式，只要是涉及到网络请求的内容，都会先发送请求去获取资源，至于资源到本地之后什么时候用，由浏览器自己协调。</li>
+</ul>
+
+            
+        </div>
+    </div>
+
+    <div class="post-tags">
+        
+        
+    </div>
+
+    <a href="/2022/10/02/浏览器页面的阻塞渲染/ " class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+
     <a href="/2022/05/07/JavaScript垃圾回收/">
         <h2>
             
