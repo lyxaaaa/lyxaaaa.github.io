@@ -197,6 +197,85 @@
 
 <div class="post">
 
+    <a href="/2022/10/29/react-router v6/">
+        <h2>
+            
+        </h2>
+    </a>
+
+    <div class="category-and-date">
+
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2022/10/29
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            
+            <h2 id="路由组件"><a href="#路由组件" class="headerlink" title="路由组件"></a>路由组件</h2><h3 id="与"><a href="#与" class="headerlink" title="与"></a><BrowserRouter>与<HashRouter></h3><p>作用：整体结构，用于包裹组件<br>区别：<br>一     path表现形式不一样：HashRouter含#，而BrowserRouter无<br>         例如：localhost:3000/#/demo/test      localhost:3000/demo/test<br>注：#后面的请求数据不会返回给后端，因此改变 hash 不会重新加载页面。<br>       HashRouter可解决一些路径错误问题<br>二     底层原理不一样：BrowserRouter使用的是H5的history API；HashRouter使用的是URL的哈希值<br>三     刷新后对路由state参数的影响：<br>BrowserRouter没有任何影响，因为state保存在history对象中；<br>HashRouter刷新后会导致路由state参数的丢失！<br><img src="https://cdn.nlark.com/yuque/0/2022/png/32453655/1666974399682-2d70496d-e87d-4cd2-b6c0-effcc24604d9.png#clientId=ude8e2e54-fe34-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=124&id=ubfb406a1&margin=%5Bobject%20Object%5D&name=image.png&originHeight=155&originWidth=1203&originalType=binary&ratio=1&rotation=0&showTitle=false&size=14265&status=done&style=none&taskId=ua68fc469-419a-476b-beeb-65e13fe62ab&title=&width=962.4" alt="image.png"></p>
+<h3 id=""><a href="#" class="headerlink" title=""></a><Navigate></h3><p>只要这个组件渲染，立马修改路径，切换视图.<br>根据sum值切换视图：</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sum==<span class="number">2</span> ? <span class="xml"><span class="tag">&lt;<span class="name">Navigate</span> <span class="attr">to</span>=<span class="string">&#x27;/about&#x27;</span> <span class="attr">replace</span>=<span class="string">&#123;true&#125;</span>&gt;</span> : <span class="tag">&lt;<span class="name">h4</span>&gt;</span>sum is not two.<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<p>跳转模式：</p>
+<ul>
+<li>replace：覆盖原页面，不可回退</li>
+<li>push：默认，可回退</li>
+</ul>
+<h3 id="与-1"><a href="#与-1" class="headerlink" title="与"></a><Routes />与<Route /></h3><p><Routes />包裹<Route /><br><Route  caseSensitive>是否区分大小写，默认false<br><Route />可嵌套使用，可配合路由表<br><Routes><br>&lt;Route indexpath=”/“ element={<Home />} /&gt;<br>&lt;Route path=”about” element={<About />} /&gt;<br>&lt;Route path=”/users/:id” element={<User />} /&gt;<br></Routes></p>
+<h3 id="useRoutes"><a href="#useRoutes" class="headerlink" title="useRoutes"></a>useRoutes</h3><p>将路由表抽离出来，形式上更加直观</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> router = useRoutes([</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">path</span>:<span class="string">&#x27;/home&#x27;</span>,</span><br><span class="line">    <span class="attr">element</span>: <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>home...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">path</span>:<span class="string">&#x27;/about&#x27;</span>, </span><br><span class="line">    <span class="attr">element</span>: <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>aaa<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  &#125;</span><br><span class="line">]);</span><br><span class="line"><span class="comment">//然后在APP.tsx里面return useRoutes(router)</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>这个router数组就是路由表<br>可 const element = useRoutes(router)<br>然后将{element}放在想要的位置</p>
+<h3 id="useNavigate"><a href="#useNavigate" class="headerlink" title="useNavigate"></a>useNavigate</h3><p>可实现编程式路由导航</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> navigate = useNavigate();</span><br><span class="line"><span class="comment">//后退</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">back</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  navigate(-<span class="number">1</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//前进</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">forward</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  navigate(<span class="number">1</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//跳转到指定位置,实现重定向</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">showDetail</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  navigate(<span class="string">&#x27;/about&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="-1"><a href="#-1" class="headerlink" title=""></a><Outlet /></h3><p>指定路由组件呈现的位置</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="comment">//新生 J</span></span><br><span class="line">  <span class="attr">path</span>:<span class="string">&quot;/visitor&quot;</span>,</span><br><span class="line">    <span class="attr">element</span>:<span class="xml"><span class="tag">&lt;<span class="name">J_layout</span> /&gt;</span></span>,</span><br><span class="line">    children:[</span><br><span class="line">    &#123;<span class="attr">path</span>:<span class="string">&quot;&quot;</span>,<span class="attr">element</span>:<span class="xml"><span class="tag">&lt;<span class="name">Navigate</span> <span class="attr">to</span>=<span class="string">&quot;form&quot;</span> /&gt;</span></span>&#125;,</span><br><span class="line">    &#123;<span class="attr">path</span>:<span class="string">&quot;form&quot;</span>,<span class="attr">element</span>:<span class="xml"><span class="tag">&lt;<span class="name">AJ_form</span> /&gt;</span></span>&#125;,</span><br><span class="line">    &#123;<span class="attr">path</span>:<span class="string">&quot;progress&quot;</span>,<span class="attr">element</span>:<span class="xml"><span class="tag">&lt;<span class="name">AJ_progress</span> /&gt;</span></span>&#125;,</span><br><span class="line">    &#123;<span class="attr">path</span>:<span class="string">&quot;work&quot;</span>,<span class="attr">element</span>:<span class="xml"><span class="tag">&lt;<span class="name">AJ_work</span> /&gt;</span></span>&#125;,</span><br><span class="line">    ]</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;div className=<span class="string">&#x27;J-container&#x27;</span>&gt;</span><br><span class="line">  <span class="xml"><span class="tag">&lt;<span class="name">Header</span>&gt;</span><span class="tag">&lt;/<span class="name">Header</span>&gt;</span></span></span><br><span class="line">  <span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span>=<span class="string">&quot;J-body&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span>=<span class="string">&quot;J-box&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">ul</span> <span class="attr">className</span>=<span class="string">&quot;J-nav&quot;</span>&gt;</span>                  </span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">NavLink</span> <span class="attr">className</span>=<span class="string">&#123;computedName&#125;</span> <span class="attr">to</span>=<span class="string">&quot;/visitor/form&quot;</span>&gt;</span>报名表查看<span class="tag">&lt;/<span class="name">NavLink</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">NavLink</span> <span class="attr">className</span>=<span class="string">&#123;computedName&#125;</span> <span class="attr">to</span>=<span class="string">&quot;/visitor/progress&quot;</span>&gt;</span>进度查询<span class="tag">&lt;/<span class="name">NavLink</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">NavLink</span> <span class="attr">className</span>=<span class="string">&#123;computedName&#125;</span> <span class="attr">to</span>=<span class="string">&quot;/visitor/work&quot;</span>&gt;</span>作业查询<span class="tag">&lt;/<span class="name">NavLink</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span>=<span class="string">&quot;J-content&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">Outlet</span>&gt;</span><span class="tag">&lt;/<span class="name">Outlet</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="传递参数的hooks"><a href="#传递参数的hooks" class="headerlink" title="传递参数的hooks"></a>传递参数的hooks</h2><h3 id="useParams"><a href="#useParams" class="headerlink" title="useParams"></a>useParams</h3><p>实现a组件传递参数给b组件</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;Link to=<span class="string">&#x27;b/$&#123;item.id&#125;/$&#123;item.title&#125;/$&#123;item.content&#125;&#x27;</span>&gt;&lt;/Link&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">children:[</span><br><span class="line">  &#123;<span class="attr">path</span>:<span class="string">&#x27;b/:id/:title/:content&#x27;</span>,</span><br><span class="line">   <span class="attr">element</span>:<span class="xml"><span class="tag">&lt;<span class="name">B</span> /&gt;</span></span>   </span><br><span class="line">  &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123;id,title,content&#125; = useParams();</span><br></pre></td></tr></table></figure>
+
+<h3 id="usesearchParams"><a href="#usesearchParams" class="headerlink" title="usesearchParams"></a>usesearchParams</h3><p>传递search参数<br>与useParams区别：在router制定路由表时无需占位<br>实现a组件给b组件传参</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;Link to=&#123;<span class="string">&#x27;b?id=$&#123;item.id&#125;&amp;title=$&#123;item.title&#125;&amp;content=$&#123;item.content&#125;&#x27;</span>&#125;&gt;&lt;/Link&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [search,setSearch] = usesearchParams();</span><br><span class="line"><span class="keyword">const</span> id = search.get(<span class="string">&#x27;id&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> title = search.get(<span class="string">&#x27;title&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> content = search.get(<span class="string">&#x27;content&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>这里的setSearch是一个函数，可更新对应的search参数</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;button onclick=&#123;<span class="function">()=&gt;</span>&#123;setSearch(<span class="string">&#x27;id=00&amp;&amp;title=&#x27;</span>detail<span class="string">&#x27;&amp;&amp;content=&#x27;</span><span class="built_in">this</span> is content<span class="string">&#x27;&#x27;</span>)&#125;&#125;&gt;&lt;/button&gt; </span><br></pre></td></tr></table></figure>
+
+<h3 id="uselocation"><a href="#uselocation" class="headerlink" title="uselocation"></a>uselocation</h3><p>传递state参数<br>在router注册路由表时同样不需要占位<br>实现a组件传递参数给b组件</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;Link to=<span class="string">&#x27;a&#x27;</span> state=&#123;<span class="attr">id</span>:item.id,<span class="attr">title</span>:item.title,<span class="attr">content</span>:item.content&#125;&gt;&lt;/Link&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123;<span class="attr">state</span>:&#123;id,title,content&#125;&#125; = uselocation();<span class="comment">//连续解构赋值</span></span><br></pre></td></tr></table></figure>
+
+            
+        </div>
+    </div>
+
+    <div class="post-tags">
+        
+        
+    </div>
+
+    <a href="/2022/10/29/react-router v6/ " class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+
     <a href="/2022/10/02/浏览器页面的阻塞渲染/">
         <h2>
             
