@@ -176,7 +176,7 @@
             <span class="icon">
                 <a-icon type="calendar" theme="filled" />
             </span>
-            2022/3/18
+            2023/1/14
         </span>
 
         
@@ -185,29 +185,25 @@
     </div>
 
     <div class="content" v-pre>
-        <h2 id="一-http"><a href="#一-http" class="headerlink" title="一 http"></a>一 http</h2><p>1 http是无状态协议，自身不对请求和响应之间的通信状态进行保存，这使得http是比较简单的，可以更快处理大量事务，确保协议的可伸缩性。</p>
-<p>2  http用于客户端与服务端之间的通信，一个普通的请求包括：客户端向服务端发出请求，服务端处理请求，服务端将结果响应给客户端。</p>
-<p>3 与http关系密切的协议：IP TCP DNS<br>（TCP/IP协议族按层次分为：应用层、网络层、传输层、链路层）<br><strong>IP协议</strong>:  位于网络层，作用是把各种数据包传递给对方，而要保证确实传送到对方那里， 则需要满足各类条件。 其中两个重要的条件是 IP 地址和 MAC地址 。 IP地址指明了节点被分配到的地址，可变换；Mac地址是指网卡所属的固定位置，基本不会更改。</p>
-<p><strong>TCP协议</strong>：位于传输层，提供可靠的字节流服务（将大块数据分割成以报文段为单位的数据包进行管理）。TCP的三次握手：发送端首先将标有SYN标志的数据包发给对方，接收端收到后回传一个带有SYN/ACK标志的数据包来确认收到信息，最后发送端再回传一个带ACK标志的数据包代表“握手”结束。</p>
-<p><strong>DNS服务</strong>：位于应用层，提供域名到IP地址的解析服务（通过域名查找IP地址或者逆向从IP地址反查域名）。<br><img src="https://img-blog.csdnimg.cn/276ebb0e190c452db861273a6f2c3d4b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5p6r5qGl77yG5pyI5b2x,size_16,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-<h2 id="二-cookie"><a href="#二-cookie" class="headerlink" title="二 cookie"></a>二 cookie</h2><p><strong>基本介绍</strong>：1  当一个浏览器访问某web服务器时，web服务器会调用addCookie()方法，在响应头中添加一个名叫Set-Cookie的响应字段用于将Cookie返回给浏览器，当浏览器第二次访问该web服务器时会自动的将该cookie回传给服务器，来实现用户状态跟踪。</p>
-<p>2  每一个cookie都有一个name和一个value，且name属性是唯一的。每个web浏览器储存多个web站点的cookie，浏览器一般只允许存放300个Cookie，每个站点最多存放20个Cookie，每个Cookie的大小限制为4KB。</p>
-<p><strong>分类：会话级别 or 持久化</strong><br>1 会话级别的cookie储存在浏览器的内存中，用户关闭浏览器后删除。</p>
-<p>2 持久化的cookie存储在浏览器目录下的文件（磁盘）中，这需要设置该cookie的生命周期setMaxAge，以秒为单位，优先级别高于expires，类似定时器代表过了多久浏览器删除该cookie。</p>
-<p><strong>cookie的作用域</strong><br>cookie的domain和path属性定义了cookie的作用范围，即访问哪些网站或url时，会自动的带着该cookie。domain即域名，默认是当前主机(不包括子域名)，path默认是*(所有路径)，即域名后面的的路径。大部分情况下我们都是使用默认的设置即可。</p>
-<h2 id="三-session"><a href="#三-session" class="headerlink" title="三 session"></a>三 session</h2><p><strong>基本介绍</strong>：web服务器中会开辟一块内存用来保存服务器端所有的session，每个session都会有一个唯一标识sessionid，根据客户端传过来的jsessionid(cookie中)，找到对应的服务器端的session。为了防止服务器端的session过多导致内存溢出，web服务器默认会给每个session设置一个有效期,    （30分钟）若有效期内客户端没有访问过该session，服务器就认为该客户端已离线并删除该session。</p>
-<p><strong>保存sessionid的方式</strong></p>
-<p>1 放在cookie中，通过一个特殊的cookie，name为JSESSIONID，value为服务器端某个 session的ID，默认的方式。但是当浏览器禁用cookie后session就会失效。</p>
-<p>2 附加在url路径后面，在cookie浏览器被禁用时启用。可作为附加信息添在url后面或作为查询字符串加在url后面</p>
-<p><strong>基本原理</strong></p>
-<p>当用户发送请求到服务器后，先检查请求中是否含有sessionid，如果没有说明是第一次访问，服务器就会创建一个session对象，并将sessionid附加到set-cookie的响应头中。<br>如果存在sessionid就会到服务器查找对应的session。所以说，服务器端的session和客户端的cookie是息息相关的，若是没有了cookie，又不做其他处理的话，服务器端的session也没了。</p>
-<p><strong>question：关闭浏览器后session会消失吗？</strong><br>tip：从服务端和浏览器端考虑。</p>
-<h2 id="四-token"><a href="#四-token" class="headerlink" title="四 token"></a>四 token</h2><p><strong>基本介绍</strong>：token可理解为“令牌”，是全局唯一的一个字符串，用来识别唯一的客户端。token解决了session依赖于单个Web服务器的问题，session只存在于单一服务器中，而在web服务器集群环境下需要用户多次登录，使得用户体验很不好。比如，某人在a服务器上登录过一次，这时跳转到b服务器但依靠session就还得再登录一次。</p>
-<p><strong>基本原理</strong>：模拟cookie、session的机制。根据“cookie中根据sessionid来查找服务器端session的”，<strong>生成客户端唯一字符串</strong>；使用redis的哈希类型来模型服务器端的session，<strong>得到服务端会话信息存储</strong>，再让二者匹配。</p>
-<p>我们可以在用户第一次请求该web服务器时或是用户登录该web服务器时，生成一个全局唯一的token返回给前端存储，同时将该用户信息存到redis中并设置有效期，之后每次请求中都在请求头中带着这个token，服务器端根据这个token到redis中查找对应的用户信息，即得到了我们所说的 “session”。</p>
-<h2 id="总结cookie-session-token"><a href="#总结cookie-session-token" class="headerlink" title="总结cookie session token"></a>总结cookie session token</h2><p><strong>cookie</strong>：一种数据载体，把session放在cookie中送到客户端那边去，之后cookie跟着每个请求头发给服务端。</p>
-<p><strong>session</strong>：诞生并保存在服务器中，由服务器主导一切。</p>
-<p><strong>token</strong>：诞生于服务器，保存于浏览器，由客户端主导一切，可以放在cookie或storage里，持“令牌”访问服务器。</p>
+        <h1 id="Apifox"><a href="#Apifox" class="headerlink" title="Apifox"></a>Apifox</h1><p> API 文档、API 调试、API Mock、API 自动化测试一体化协作平台<br>学习：<br><a target="_blank" rel="noopener" href="https://www.apifox.cn/help/#_21-%E5%88%86%E9%92%9F%E5%AD%A6%E4%BC%9A-apifox-%F0%9F%91%8D">https://www.apifox.cn/help/#_21-%E5%88%86%E9%92%9F%E5%AD%A6%E4%BC%9A-apifox-%F0%9F%91%8D</a></p>
+<h1 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h1><p><strong>是什么：</strong>一种可以在服务器和客户端之间传输的数据格式，非编程语言<br>json在线检查语法：<a target="_blank" rel="noopener" href="https://www.json.cn/">https://www.json.cn/</a><br><strong>基本语法</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>:<span class="string">&quot;jack&quot;</span>,</span><br><span class="line">  <span class="string">&quot;age&quot;</span> :<span class="number">22</span>,</span><br><span class="line">  <span class="string">&quot;friends&quot;</span>:[</span><br><span class="line">    &#123;<span class="string">&quot;name&quot;</span>:<span class="string">&quot;betty&quot;</span>,<span class="string">&quot;age&quot;</span>:<span class="number">16</span>&#125;,</span><br><span class="line">    &#123;<span class="string">&quot;name&quot;</span>:<span class="string">&quot;mike&quot;</span>,<span class="string">&quot;age&quot;</span>:<span class="number">23</span>&#125;</span><br><span class="line">  ],</span><br><span class="line">  <span class="string">&quot;fruits&quot;</span>:[<span class="string">&quot;apple&quot;</span>,<span class="string">&quot;banana&quot;</span>,<span class="string">&quot;mango&quot;</span>],</span><br><span class="line">  <span class="string">&quot;number&quot;</span>:<span class="number">1e3</span> <span class="comment">//1000  </span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>数组（Array）用方括号(“[]”)表示。</li>
+<li>对象（0bject）用大括号(“{}”)表示。</li>
+<li>名称/值对(name/value）组合成数组和对象。</li>
+<li>名称(name）置于<strong>双引号</strong>中，值（value）有<strong>字符串、数值、布尔值、null、对象和数组</strong>。</li>
+<li>并列的数据之间用逗号(“,”）分隔</li>
+</ul>
+<p><strong>Json与js对象互转</strong></p>
+<ul>
+<li>**Json.parse    **json ——&gt; js对象</li>
+<li>**Json.stringify    **js对象 ——&gt; json<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">&#x27;&#123;&quot;name&quot;:&quot;jack&quot;,&quot;age&quot;:22&#125;&#x27;</span>;</span><br><span class="line"><span class="keyword">var</span> obj = <span class="built_in">JSON</span>.parse(str);</span><br><span class="line"><span class="built_in">console</span>.log(obj);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> jsonstr = <span class="built_in">JSON</span>.stringify(obj)</span><br><span class="line"><span class="built_in">console</span>.log(jsonstr)</span><br></pre></td></tr></table></figure>
+<img src="https://cdn.nlark.com/yuque/0/2023/png/32453655/1673675144915-82b752b4-cb3a-48d6-9ab9-f46baba260b8.png#averageHue=%23fdfcfa&clientId=u16e5dcbb-7ba4-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=171&id=ud606b142&margin=%5Bobject%20Object%5D&name=image.png&originHeight=182&originWidth=471&originalType=binary&ratio=1&rotation=0&showTitle=false&size=14284&status=done&style=none&taskId=u5d03bd2b-efb4-4a29-ada5-6c39ae3ef1c&title=&width=443.8000183105469" alt="image.png"></li>
+</ul>
+<h1 id="token"><a href="#token" class="headerlink" title="token"></a>token</h1><p>“令牌”，是服务器生成的一段加密字符串，然后返回给客户端<br>当第一次登录后,服务器生成一个token便将此token返回给客户端,以后客户端只要带上这个token前来请求数据即可,无需再次带上用户名和密码<br><strong>基于token的身份验证：</strong><br>客户端在初次登录时，填写好的账号密码发送到服务端，然后服务端对此进行验证。<br>验证成功后，服务端签发一个token，之后把这个token发送给客户端。<br>客户端将这个token进行存储，比如放到local storage或cookie中，此后需要向服务器请求某些资源时就携带这个token，服务端再对token进行验证。<br>验证成功返回有效信息，错误返回状态码。<br>需要注意，token是具备有效期的，有时候显示登录过期代表token过期，这时就需要重新登录验证。<br><strong>token的使用：</strong><br>登录时返回token<br><img src="https://cdn.nlark.com/yuque/0/2023/png/32453655/1673683050728-b46f8a10-d1bc-47dd-99e8-1db421fc5444.png#averageHue=%2318191e&clientId=u16e5dcbb-7ba4-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=262&id=u333f810e&margin=%5Bobject%20Object%5D&name=image.png&originHeight=327&originWidth=1131&originalType=binary&ratio=1&rotation=0&showTitle=false&size=40207&status=done&style=none&taskId=u23be914e-fbbd-4a08-b0f1-a8c653be962&title=&width=904.8" alt="image.png"></p>
+<p>请求数据时，token通常作为请求参数<br><img src="https://cdn.nlark.com/yuque/0/2023/png/32453655/1673683294089-f33d09d5-ea29-4369-a028-0a32c6ab4220.png#averageHue=%231d1e23&clientId=u16e5dcbb-7ba4-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=166&id=u043d1d81&margin=%5Bobject%20Object%5D&name=image.png&originHeight=207&originWidth=1118&originalType=binary&ratio=1&rotation=0&showTitle=false&size=10659&status=done&style=none&taskId=ue901d472-bcf6-49f1-acc0-7b97529e831&title=&width=894.4" alt="image.png"></p>
 
     </div>
 

@@ -197,6 +197,65 @@
 
 <div class="post">
 
+    <a href="/2023/01/14/Apifox&JSON&token/">
+        <h2>
+            
+        </h2>
+    </a>
+
+    <div class="category-and-date">
+
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2023/1/14
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            
+            <h1 id="Apifox"><a href="#Apifox" class="headerlink" title="Apifox"></a>Apifox</h1><p> API 文档、API 调试、API Mock、API 自动化测试一体化协作平台<br>学习：<br><a target="_blank" rel="noopener" href="https://www.apifox.cn/help/#_21-%E5%88%86%E9%92%9F%E5%AD%A6%E4%BC%9A-apifox-%F0%9F%91%8D">https://www.apifox.cn/help/#_21-%E5%88%86%E9%92%9F%E5%AD%A6%E4%BC%9A-apifox-%F0%9F%91%8D</a></p>
+<h1 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h1><p><strong>是什么：</strong>一种可以在服务器和客户端之间传输的数据格式，非编程语言<br>json在线检查语法：<a target="_blank" rel="noopener" href="https://www.json.cn/">https://www.json.cn/</a><br><strong>基本语法</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>:<span class="string">&quot;jack&quot;</span>,</span><br><span class="line">  <span class="string">&quot;age&quot;</span> :<span class="number">22</span>,</span><br><span class="line">  <span class="string">&quot;friends&quot;</span>:[</span><br><span class="line">    &#123;<span class="string">&quot;name&quot;</span>:<span class="string">&quot;betty&quot;</span>,<span class="string">&quot;age&quot;</span>:<span class="number">16</span>&#125;,</span><br><span class="line">    &#123;<span class="string">&quot;name&quot;</span>:<span class="string">&quot;mike&quot;</span>,<span class="string">&quot;age&quot;</span>:<span class="number">23</span>&#125;</span><br><span class="line">  ],</span><br><span class="line">  <span class="string">&quot;fruits&quot;</span>:[<span class="string">&quot;apple&quot;</span>,<span class="string">&quot;banana&quot;</span>,<span class="string">&quot;mango&quot;</span>],</span><br><span class="line">  <span class="string">&quot;number&quot;</span>:<span class="number">1e3</span> <span class="comment">//1000  </span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>数组（Array）用方括号(“[]”)表示。</li>
+<li>对象（0bject）用大括号(“{}”)表示。</li>
+<li>名称/值对(name/value）组合成数组和对象。</li>
+<li>名称(name）置于<strong>双引号</strong>中，值（value）有<strong>字符串、数值、布尔值、null、对象和数组</strong>。</li>
+<li>并列的数据之间用逗号(“,”）分隔</li>
+</ul>
+<p><strong>Json与js对象互转</strong></p>
+<ul>
+<li>**Json.parse    **json ——&gt; js对象</li>
+<li>**Json.stringify    **js对象 ——&gt; json<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">&#x27;&#123;&quot;name&quot;:&quot;jack&quot;,&quot;age&quot;:22&#125;&#x27;</span>;</span><br><span class="line"><span class="keyword">var</span> obj = <span class="built_in">JSON</span>.parse(str);</span><br><span class="line"><span class="built_in">console</span>.log(obj);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> jsonstr = <span class="built_in">JSON</span>.stringify(obj)</span><br><span class="line"><span class="built_in">console</span>.log(jsonstr)</span><br></pre></td></tr></table></figure>
+<img src="https://cdn.nlark.com/yuque/0/2023/png/32453655/1673675144915-82b752b4-cb3a-48d6-9ab9-f46baba260b8.png#averageHue=%23fdfcfa&clientId=u16e5dcbb-7ba4-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=171&id=ud606b142&margin=%5Bobject%20Object%5D&name=image.png&originHeight=182&originWidth=471&originalType=binary&ratio=1&rotation=0&showTitle=false&size=14284&status=done&style=none&taskId=u5d03bd2b-efb4-4a29-ada5-6c39ae3ef1c&title=&width=443.8000183105469" alt="image.png"></li>
+</ul>
+<h1 id="token"><a href="#token" class="headerlink" title="token"></a>token</h1><p>“令牌”，是服务器生成的一段加密字符串，然后返回给客户端<br>当第一次登录后,服务器生成一个token便将此token返回给客户端,以后客户端只要带上这个token前来请求数据即可,无需再次带上用户名和密码<br><strong>基于token的身份验证：</strong><br>客户端在初次登录时，填写好的账号密码发送到服务端，然后服务端对此进行验证。<br>验证成功后，服务端签发一个token，之后把这个token发送给客户端。<br>客户端将这个token进行存储，比如放到local storage或cookie中，此后需要向服务器请求某些资源时就携带这个token，服务端再对token进行验证。<br>验证成功返回有效信息，错误返回状态码。<br>需要注意，token是具备有效期的，有时候显示登录过期代表token过期，这时就需要重新登录验证。<br><strong>token的使用：</strong><br>登录时返回token<br><img src="https://cdn.nlark.com/yuque/0/2023/png/32453655/1673683050728-b46f8a10-d1bc-47dd-99e8-1db421fc5444.png#averageHue=%2318191e&clientId=u16e5dcbb-7ba4-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=262&id=u333f810e&margin=%5Bobject%20Object%5D&name=image.png&originHeight=327&originWidth=1131&originalType=binary&ratio=1&rotation=0&showTitle=false&size=40207&status=done&style=none&taskId=u23be914e-fbbd-4a08-b0f1-a8c653be962&title=&width=904.8" alt="image.png"></p>
+<p>请求数据时，token通常作为请求参数<br><img src="https://cdn.nlark.com/yuque/0/2023/png/32453655/1673683294089-f33d09d5-ea29-4369-a028-0a32c6ab4220.png#averageHue=%231d1e23&clientId=u16e5dcbb-7ba4-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=166&id=u043d1d81&margin=%5Bobject%20Object%5D&name=image.png&originHeight=207&originWidth=1118&originalType=binary&ratio=1&rotation=0&showTitle=false&size=10659&status=done&style=none&taskId=ue901d472-bcf6-49f1-acc0-7b97529e831&title=&width=894.4" alt="image.png"></p>
+
+            
+        </div>
+    </div>
+
+    <div class="post-tags">
+        
+        
+    </div>
+
+    <a href="/2023/01/14/Apifox&JSON&token/ " class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+
     <a href="/2022/10/29/react-router v6/">
         <h2>
             
@@ -730,7 +789,7 @@
 <footer id="footer">
     <div class="footer-wrap">
         <div>
-            © 2018 - 2022 Hexo
+            © 2018 - 2023 Hexo
             <span class="footer-icon">
                 <a-icon type="flag" theme="filled" /></span>
             @John Doe
