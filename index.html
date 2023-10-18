@@ -1,952 +1,888 @@
-
 <!DOCTYPE html>
-<html lang="en ">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hexo || </title>
-    <meta name="author" content="John Doe">
-    <meta name="description" content=" ">
-    <meta name="keywords" content=" ">
-    <link rel="icon" href="/images/avatar.png">
-    <link rel="stylesheet" href="/css/antd.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
     
-    <link rel="stylesheet" href="/css/maiden-theme.css">
+    <meta name="author" content="The Redefine Team">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     
-    <script src="/js/vue.js"></script>
-    <script src="/js/antd.min.js"></script>
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://example.com/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/redefine-favicon.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-favicon.svg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/redefine-favicon.svg">
+    <!--- Page Info-->
+    
+    <title>
+        
+        Theme Redefine
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/assets/build/styles.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/fonts.css">
+
+    
+<link rel="stylesheet" href="/fonts/Satoshi/satoshi.css">
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+    <!--- Font Part-->
+    
+    
+    
+    
+
+    <!--- Inject Part-->
+    
+    <script id="hexo-configurations">
+    window.config = {"hostname":"example.com","root":"/","language":"en"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":true,"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Theme Redefine","subtitle":{"text":[],"hitokoto":{"enable":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.5.0","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"links":null},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2022/8/17 11:45:14"};
+    window.lang_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
 <meta name="generator" content="Hexo 5.4.0"></head>
 
+
 <body>
-
-    <div id="loading"
-        style="height: 100vh; width: 100%; position: fixed;display: flex;z-index: 200; justify-content: space-between;">
-        <div id="loadleft" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
-        <div id="loadright" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
-        <div
-            style="position: fixed; height: 100vh; width: 100%;display: flex;justify-content: center;align-items: center;">
-            <div id="loadcontent"
-                style="width:400px;height:400px;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px#a3ddfb; text-align:center;opacity:1;transition:opacity 0.3s ease-out;">
-                <div>
-                    <h2>LOADING...</h2>
-                    <p>加载过慢请开启缓存(浏览器默认开启)</p>
-                    <div>
-                        <img src="/dancingkitty.gif" alt="loading">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="layout">
-        <transition name="into">
-            <div v-show="show_page" style="display: none;">
-                <div id="menu_show">
-                     
-<nav id="menu">
-    <div class="desktop-menu">
-        <a href="/">
-            <span class="title">Hexo</span>
-        </a>
-        
-        <a href="/">
-            <span>
-                <a-icon type="home" theme="filled" />
-            </span>
-            <span>home</span>
-        </a>
-        
-        <a href="/about">
-            <span>
-                <a-icon type="idcard" theme="filled" />
-            </span>
-            <span>about</span>
-        </a>
-        
-        <a href="/archives">
-            <span>
-                <a-icon type="folder" theme="filled" />
-            </span>
-            <span>archives</span>
-        </a>
-        
-        <a href="/like/categories">
-            <span>
-                <a-icon type="book" theme="filled" />
-            </span>
-            <span>categories</span>
-        </a>
-        
-        <a href="/like/tags">
-            <span>
-                <a-icon type="tags" theme="filled" />
-            </span>
-            <span>tags</span>
-        </a>
-        
-        <a target="_blank" rel="noopener" href="https://en.korilin.com">
-            <span>
-                <a-icon type="compass" theme="filled" />
-            </span>
-            <span>英文博客</span>
-        </a>
-        
-    </div>
-
-    <div :class="'phone-menu ' + menu_show" id="phone-menu">
-        <div :class="'title'" @click="menu_show=!menu_show">
-            <span style="margin-right: 10px;">
-                <a-icon type="appstore" theme="filled" />
-            </span>
-            <span>Hexo</span>
-        </div>
-        <div class="items" v-show="menu_show">
-            
-            <a href="/">
-                <div class="item">
-                    <div style="min-width:20px; max-width:50px; width: 10%">
-                        <a-icon type="home" theme="filled" />
-                    </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">home</div>
-                </div>
-            </a>
-            
-            <a href="/about">
-                <div class="item">
-                    <div style="min-width:20px; max-width:50px; width: 10%">
-                        <a-icon type="idcard" theme="filled" />
-                    </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">about</div>
-                </div>
-            </a>
-            
-            <a href="/archives">
-                <div class="item">
-                    <div style="min-width:20px; max-width:50px; width: 10%">
-                        <a-icon type="folder" theme="filled" />
-                    </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">archives</div>
-                </div>
-            </a>
-            
-            <a href="/like/categories">
-                <div class="item">
-                    <div style="min-width:20px; max-width:50px; width: 10%">
-                        <a-icon type="book" theme="filled" />
-                    </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">categories</div>
-                </div>
-            </a>
-            
-            <a href="/like/tags">
-                <div class="item">
-                    <div style="min-width:20px; max-width:50px; width: 10%">
-                        <a-icon type="tags" theme="filled" />
-                    </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">tags</div>
-                </div>
-            </a>
-            
-            <a target="_blank" rel="noopener" href="https://en.korilin.com">
-                <div class="item">
-                    <div style="min-width:20px; max-width:50px; width: 10%">
-                        <a-icon type="compass" theme="filled" />
-                    </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">英文博客</div>
-                </div>
-            </a>
-            
-        </div>
-        <div class="curtain" v-show="menu_show"></div>
-    </div>
-
-</nav>
-                </div>
-
-                <div id="main">
-                    <div id="home-head" style=background-image:url('home.jpg')>
-    <script>
-        var menu = document.getElementById("menu")
-        menu.className += " menu-color"
-    </script>
-     
-    <div id="home-info" class="home-info" @click="home_click">
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="info">
-            <div class="wrap">
-                <h1>Hexo</h1>
-                <h3></h3>
-                <h5></h5>
-            </div>
-        </span>
-    </div>
-     
-</div>
-
-
-
-<div id="home-posts-wrap" class=>
-    <div id="home-posts">
-
-        <div id="posts">
-            
-
-<div class="post">
-
-    <a href="/2023/10/14/前端跨域/">
-        <h2>
-            
-        </h2>
-    </a>
-
-    <div class="category-and-date">
-
-        
-
-        <span class="date">
-            <span class="icon">
-                <a-icon type="calendar" theme="filled" />
-            </span>
-            2023/10/14
-        </span>
-
-    </div>
-
-    <div class="excerpt">
-        <div class="content" v-pre>
-            
-            
-            <h1 id="什么是跨域？"><a href="#什么是跨域？" class="headerlink" title="什么是跨域？"></a>什么是跨域？</h1><p>“跨域”（Cross-Origin）指的是在浏览器端，当一个网页的 JavaScript 代码尝试去请求另一个域下的资源时，就会发生跨域问题。<br>对于前后端分离的项目在开发阶段容易发生跨域问题<img src="https://cdn.nlark.com/yuque/0/2023/png/32453655/1697251714968-34a8c698-01d0-4470-8484-053005651e3e.png#averageHue=%23fbdfdc&clientId=u86d9a65d-8683-4&from=paste&height=97&id=uc266ed5a&originHeight=121&originWidth=690&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=18297&status=done&style=none&taskId=u10fef2c0-b25b-42ce-a4d9-ed765394b3b&title=&width=552" alt="image.png"></p>
-<h1 id="为什么跨域？"><a href="#为什么跨域？" class="headerlink" title="为什么跨域？"></a>为什么跨域？</h1><p>需要明确的是，跨域一般发生在前端，即浏览器。这主要是因为浏览器<strong>同源策略</strong>的限制。<br>两个服务器之间如果处于不同域名，也不会发生跨域问题，因为不受同源策略的限制。<br>那么什么是同源策略呢？<br>所谓“同源”即 <strong>协议、域名、端口</strong> 三者必须一致。如果两个域名不一致，即使指向同一个IP地址也非同源。<br>同源策略是一个重要的安全策略，它<strong>用于限制一个源的文档或者它加载的脚本如何能与另一个源的资源进行交互</strong>。 它能帮助阻隔恶意文档，减少可能被攻击（XSS、CSRF）的媒介。<br>具体而言，跨域发生在以下情况：</p>
-<ol>
-<li><strong>协议不同：</strong> 当协议不同（比如一个是 **http://**，另一个是 **https://**）时，就会发生跨域。</li>
-<li><strong>域名不同：</strong> 当域名不同（比如一个是 <strong>example.com</strong>，另一个是<strong>api.example.com</strong>）时，就会发生跨域。</li>
-<li><strong>端口不同：</strong> 当端口不同（比如一个是 <strong>example.com:80</strong>，另一个是 <strong>example.com:8080</strong>）时，就会发生跨域。</li>
-</ol>
-<p><img src="https://cdn.nlark.com/yuque/0/2023/png/32453655/1697204709680-f7c38088-ee16-4e8a-99cd-7fb1220e3237.png#averageHue=%23faf9f8&clientId=u86d9a65d-8683-4&from=paste&height=336&id=gFFOm&originHeight=420&originWidth=900&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=39357&status=done&style=none&taskId=ueef0522e-8570-4224-bcf7-b599ccec8d5&title=&width=720" alt="image.png"></p>
-<p>同源策略限制以下几种行为：</p>
-<ul>
-<li>Cookie、LocalStorage 和 IndexDB 无法读取</li>
-<li>DOM和JS对象无法获得</li>
-<li>AJAX 请求不能发送<h1 id="跨域的解决方案"><a href="#跨域的解决方案" class="headerlink" title="跨域的解决方案"></a>跨域的解决方案</h1><h2 id="JSONP"><a href="#JSONP" class="headerlink" title="JSONP"></a>JSONP</h2>JSONP全称为JSON with padding。<br><img src="https://cdn.nlark.com/yuque/0/2023/png/32453655/1697212282973-51bf582e-2fa7-428d-9d33-deb09817ef7f.png#averageHue=%23bab8b4&clientId=u86d9a65d-8683-4&from=paste&height=523&id=u8021dfa2&originHeight=654&originWidth=1794&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=280951&status=done&style=none&taskId=ucce61f75-c3bf-4f71-bfe7-9304a466d9a&title=&width=1435.2" alt="image.png">JSONP的做法是：当需要跨域请求时，生成一个<strong>script元素</strong>去请求服务器，由于浏览器并不阻止script元素的请求（属于http请求，不引发跨域问题），这样请求可以到达服务器。服务器拿到请求后，响应一段JS代码，这段代码实际上是一个函数调用，调用的是客户端预先生成好的函数，并把浏览器需要的<strong>真实数据作为参数传递到回调函数中</strong>，从而间接的把数据传递给客户端。<br>客户端：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">handleCallBack</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(data)</span><br><span class="line">  &#125;  </span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">  <span class="attr">src</span>=<span class="string">&quot;http://localhost:8080/server/index.php?callback=handleCallBack&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">  <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-简而言之就是通过<script>的src属性，向服务端发送带有callback参数的GET请求，服务端将真实数据拼凑到callback函数中，返回给客户端，客户端再解析执行拿到真实数据。<br>故而，JSONP比较大的一个缺点就是只能发送GET 请求。<h2 id="CORS"><a href="#CORS" class="headerlink" title="CORS"></a>CORS</h2>CORS是一个W3C标准，全称是”<strong>跨域资源共享</strong>“（Cross-origin resource sharing）。<br>它允许浏览器向跨源服务器，发出XMLHttpRequest请求，是AJAX跨源请求的根本解决方案。CORS需要浏览器和服务器同时支持。目前，所有浏览器都支持该功能，IE浏览器不能低于IE10。<br>实际就是，客户端在跨域请求的请求头添加origin这一参数，origin标识自己的协议、域名、端口。服务端接收到请求如果允许跨域访问，则在响应头添加Access-Control-Allow-Origin字段，表示允许的跨源。如果是“*”则表示允许所有的跨源。<br>客户端：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">	fetch(<span class="string">&quot;http://127.0.0.1:8080&quot;</span>,</span><br><span class="line">  &#123;<span class="attr">method</span>: <span class="string">&#x27;GET&#x27;</span>&#125;)</span><br><span class="line">  .then(<span class="function"><span class="params">response</span> =&gt;</span> response.json())</span><br><span class="line">  .then(<span class="function"><span class="params">data</span> =&gt;</span> <span class="built_in">console</span>.log(data))</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-服务端：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> cors = <span class="built_in">require</span>(<span class="string">&#x27;cors&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> app = express()</span><br><span class="line"></span><br><span class="line">app.use(</span><br><span class="line">  cors(&#123;</span><br><span class="line">    <span class="attr">origin</span>: <span class="string">&#x27;*&#x27;</span>,</span><br><span class="line">    <span class="attr">methods</span>: [<span class="string">&#x27;GET&#x27;</span>,<span class="string">&#x27;POST&#x27;</span>]</span><br><span class="line">  &#125;)</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">app.get(<span class="string">&#x27;/&#x27;</span>,<span class="function">(<span class="params">request,response</span>) =&gt;</span> &#123;</span><br><span class="line">  response.json(</span><br><span class="line">    &#123;<span class="string">&quot;message&quot;</span>: <span class="string">&quot;this is a message&quot;</span>&#125;</span><br><span class="line">  )</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">8080</span>)</span><br></pre></td></tr></table></figure></li>
-</ul>
-<p>CORS跨域请求总体可以分为简单请求和非简单请求。</p>
-<h3 id="简单请求"><a href="#简单请求" class="headerlink" title="简单请求"></a>简单请求</h3><p>同时满足以下三个请求则属于简单请求：<br><strong>一 请求方法属于下面的一种：</strong></p>
-<ul>
-<li>get</li>
-<li>post</li>
-<li>head</li>
-</ul>
-<p><strong>二 请求头仅包含安全的字段，常见的安全字段如下：</strong></p>
-<ul>
-<li>Accept</li>
-<li>Accept-Language</li>
-<li>Content-Language</li>
-<li>Content-Type</li>
-<li>DPR</li>
-<li>Downlink</li>
-<li>Save-Data</li>
-<li>Viewport-Width</li>
-<li>Width</li>
-</ul>
-<p><strong>三 请求头如果包含Content-Type，仅限下面的值之一：</strong></p>
-<ul>
-<li>text/plain</li>
-<li>multipart/form-data</li>
-<li>application/x-www-form-urlencoded</li>
-</ul>
-<p>对于简单请求，根据前面所说的：客户端只需要在请求头添加origin，标明自己的url<br><img src="https://cdn.nlark.com/yuque/0/2023/png/32453655/1697253085643-462dd795-6ce5-478f-8bc0-df2556522d98.png#averageHue=%23f9f8f7&clientId=u86d9a65d-8683-4&from=paste&height=141&id=uac2c2c5c&originHeight=176&originWidth=546&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=11266&status=done&style=none&taskId=u04ecf3ec-aa48-4925-84a5-12fa0888366&title=&width=436.8" alt="image.png"><br>服务端的响应：<br><strong>1）Access-Control-Allow-Origin</strong>：必选<br> 它的值要么是请求时Origin字段的值，要么是一个*，表示接受任意域名的请求。</p>
-<p><strong>2）Access-Control-Allow-Credentials</strong>：可选<br> 它的值是一个布尔值，表示是否允许发送Cookie。默认情况下，Cookie不包括在CORS请求之中。设为true，即表示服务器明确许可，Cookie可以包含在请求中，一起发给服务器。这个值也只能设为true，如果服务器不要浏览器发送Cookie，删除该字段即可。</p>
-<p><strong>3）Access-Control-Expose-Headers</strong>：可选<br> CORS请求时，XMLHttpRequest对象的getResponseHeader()方法只能拿到6个基本字段：Cache-Control、Content-Language、Content-Type、Expires、Last-Modified、Pragma。如果想拿到其他字段，就必须在Access-Control-Expose-Headers里面指定。 </p>
-<h3 id="非简单请求"><a href="#非简单请求" class="headerlink" title="非简单请求"></a>非简单请求</h3><p>不满足简单请求条件的就是非简单请求。<br>主要流程：</p>
-<ol>
-<li><strong>浏览器发送预检请求，询问服务器是否允许</strong></li>
-<li><strong>服务器允许</strong></li>
-<li><strong>浏览器发送真实请求</strong></li>
-<li><strong>服务器完成真实的响应</strong></li>
-</ol>
-<p>一般来说非简单请求是需要对服务器中数据进行修改，如PUT、DELETE等，或者Content-Type字段的类型是application/json。<br>非简单请求会在正式通信之前，增加一次HTTP查询请求，称为”预检”请求（preflight）<br>客户端：<br><img src="https://cdn.nlark.com/yuque/0/2023/png/32453655/1697254517297-83b83396-1427-4c17-8256-484662d9d2c7.png#averageHue=%23f9f8f7&clientId=u86d9a65d-8683-4&from=paste&height=186&id=uc9266940&originHeight=233&originWidth=605&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=17831&status=done&style=none&taskId=u66e82d42-b751-48a1-a046-25f579a6aa6&title=&width=484" alt="image.png"><br>这里的请求方法是OPTIONS，表示询问。<br>origin与上面的相同，标明自己的url<br>Access-Control-Request-Method：用来列出浏览器的CORS请求会用到哪些HTTP方法，上例是PUT。<br>Access-Control-Request-Headers：（可选）该字段是一个逗号分隔的字符串，指定浏览器CORS请求会额外发送的头信息字段，上例是X-Custom-Header。<br>服务端：<br>服务器收到”预检”请求以后，检查了Origin、Access-Control-Request-Method和Access-Control-Request-Headers字段以后，确认允许跨源请求，就可以做出回应。具体含义与上述相同。</p>
-<h2 id="Nginx代理"><a href="#Nginx代理" class="headerlink" title="Nginx代理"></a>Nginx代理</h2><p><img src="https://cdn.nlark.com/yuque/0/2023/png/32453655/1697255105266-46283c52-3db0-444b-b09b-b46cc9ff3b22.png#averageHue=%23c6c3c0&clientId=u86d9a65d-8683-4&from=paste&height=434&id=uae53ae93&originHeight=543&originWidth=1864&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=293736&status=done&style=none&taskId=ucc8b06c1-70d0-40ee-8f2a-ef454582990&title=&width=1491.2" alt="image.png"><br>nginx代理跨域，实质和CORS跨域原理一样，通过配置文件设置请求响应头Access-Control-Allow-Origin…等字段。只不过前后端都不需要修改，只需要改nginx的配置。<br>客户端：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">	fetch(<span class="string">&quot;http://localhost:2222/api&quot;</span>,</span><br><span class="line">  &#123;<span class="attr">method</span>: <span class="string">&#x27;GET&#x27;</span>&#125;)</span><br><span class="line">  .then(<span class="function"><span class="params">response</span> =&gt;</span> response.json())</span><br><span class="line">  .then(<span class="function"><span class="params">data</span> =&gt;</span> <span class="built_in">console</span>.log(data))</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<p>nginx:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">server&#123;</span><br><span class="line">  listen <span class="number">2222</span>;</span><br><span class="line">  server_name localhost;</span><br><span class="line"></span><br><span class="line">  location / &#123;</span><br><span class="line">    root html;</span><br><span class="line">    index index.html index.htm;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">	location / api &#123;</span><br><span class="line">    proxy_pass http:<span class="comment">//127.0.0.1:3333;</span></span><br><span class="line">    add_header Access-Control-Allow-Origin *;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>服务端：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> app = express()</span><br><span class="line"></span><br><span class="line">app.get(<span class="string">&#x27;/&#x27;</span>,<span class="function">(<span class="params">request,response</span>) =&gt;</span> &#123;</span><br><span class="line">  response.json(</span><br><span class="line">    &#123;<span class="string">&quot;message&quot;</span>: <span class="string">&quot;this is a message&quot;</span>&#125;</span><br><span class="line">  )</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">3333</span>)</span><br></pre></td></tr></table></figure>
-
-            
-        </div>
-    </div>
-
-    <div class="post-tags">
-        
-        
-    </div>
-
-    <a href="/2023/10/14/前端跨域/ " class="go-post">
-        阅读全文
-    </a>
-</div>
-
-<div class="post">
-
-    <a href="/2023/01/14/Apifox&JSON&token/">
-        <h2>
-            
-        </h2>
-    </a>
-
-    <div class="category-and-date">
-
-        
-
-        <span class="date">
-            <span class="icon">
-                <a-icon type="calendar" theme="filled" />
-            </span>
-            2023/1/14
-        </span>
-
-    </div>
-
-    <div class="excerpt">
-        <div class="content" v-pre>
-            
-            
-            <h1 id="Apifox"><a href="#Apifox" class="headerlink" title="Apifox"></a>Apifox</h1><p> API 文档、API 调试、API Mock、API 自动化测试一体化协作平台<br>学习：<br><a target="_blank" rel="noopener" href="https://www.apifox.cn/help/#_21-%E5%88%86%E9%92%9F%E5%AD%A6%E4%BC%9A-apifox-%F0%9F%91%8D">https://www.apifox.cn/help/#_21-%E5%88%86%E9%92%9F%E5%AD%A6%E4%BC%9A-apifox-%F0%9F%91%8D</a></p>
-<h1 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h1><p><strong>是什么：</strong>一种可以在服务器和客户端之间传输的数据格式，非编程语言<br>json在线检查语法：<a target="_blank" rel="noopener" href="https://www.json.cn/">https://www.json.cn/</a><br><strong>基本语法</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>:<span class="string">&quot;jack&quot;</span>,</span><br><span class="line">  <span class="string">&quot;age&quot;</span> :<span class="number">22</span>,</span><br><span class="line">  <span class="string">&quot;friends&quot;</span>:[</span><br><span class="line">    &#123;<span class="string">&quot;name&quot;</span>:<span class="string">&quot;betty&quot;</span>,<span class="string">&quot;age&quot;</span>:<span class="number">16</span>&#125;,</span><br><span class="line">    &#123;<span class="string">&quot;name&quot;</span>:<span class="string">&quot;mike&quot;</span>,<span class="string">&quot;age&quot;</span>:<span class="number">23</span>&#125;</span><br><span class="line">  ],</span><br><span class="line">  <span class="string">&quot;fruits&quot;</span>:[<span class="string">&quot;apple&quot;</span>,<span class="string">&quot;banana&quot;</span>,<span class="string">&quot;mango&quot;</span>],</span><br><span class="line">  <span class="string">&quot;number&quot;</span>:<span class="number">1e3</span> <span class="comment">//1000  </span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>数组（Array）用方括号(“[]”)表示。</li>
-<li>对象（0bject）用大括号(“{}”)表示。</li>
-<li>名称/值对(name/value）组合成数组和对象。</li>
-<li>名称(name）置于<strong>双引号</strong>中，值（value）有<strong>字符串、数值、布尔值、null、对象和数组</strong>。</li>
-<li>并列的数据之间用逗号(“,”）分隔</li>
-</ul>
-<p><strong>Json与js对象互转</strong></p>
-<ul>
-<li>**Json.parse    **json ——&gt; js对象</li>
-<li>**Json.stringify    **js对象 ——&gt; json<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">&#x27;&#123;&quot;name&quot;:&quot;jack&quot;,&quot;age&quot;:22&#125;&#x27;</span>;</span><br><span class="line"><span class="keyword">var</span> obj = <span class="built_in">JSON</span>.parse(str);</span><br><span class="line"><span class="built_in">console</span>.log(obj);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> jsonstr = <span class="built_in">JSON</span>.stringify(obj)</span><br><span class="line"><span class="built_in">console</span>.log(jsonstr)</span><br></pre></td></tr></table></figure>
-<img src="https://cdn.nlark.com/yuque/0/2023/png/32453655/1673675144915-82b752b4-cb3a-48d6-9ab9-f46baba260b8.png#averageHue=%23fdfcfa&clientId=u16e5dcbb-7ba4-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=171&id=ud606b142&margin=%5Bobject%20Object%5D&name=image.png&originHeight=182&originWidth=471&originalType=binary&ratio=1&rotation=0&showTitle=false&size=14284&status=done&style=none&taskId=u5d03bd2b-efb4-4a29-ada5-6c39ae3ef1c&title=&width=443.8000183105469" alt="image.png"></li>
-</ul>
-<h1 id="token"><a href="#token" class="headerlink" title="token"></a>token</h1><p>“令牌”，是服务器生成的一段加密字符串，然后返回给客户端<br>当第一次登录后,服务器生成一个token便将此token返回给客户端,以后客户端只要带上这个token前来请求数据即可,无需再次带上用户名和密码<br><strong>基于token的身份验证：</strong><br>客户端在初次登录时，填写好的账号密码发送到服务端，然后服务端对此进行验证。<br>验证成功后，服务端签发一个token，之后把这个token发送给客户端。<br>客户端将这个token进行存储，比如放到local storage或cookie中，此后需要向服务器请求某些资源时就携带这个token，服务端再对token进行验证。<br>验证成功返回有效信息，错误返回状态码。<br>需要注意，token是具备有效期的，有时候显示登录过期代表token过期，这时就需要重新登录验证。<br><strong>token的使用：</strong><br>登录时返回token<br><img src="https://cdn.nlark.com/yuque/0/2023/png/32453655/1673683050728-b46f8a10-d1bc-47dd-99e8-1db421fc5444.png#averageHue=%2318191e&clientId=u16e5dcbb-7ba4-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=262&id=u333f810e&margin=%5Bobject%20Object%5D&name=image.png&originHeight=327&originWidth=1131&originalType=binary&ratio=1&rotation=0&showTitle=false&size=40207&status=done&style=none&taskId=u23be914e-fbbd-4a08-b0f1-a8c653be962&title=&width=904.8" alt="image.png"></p>
-<p>请求数据时，token通常作为请求参数<br><img src="https://cdn.nlark.com/yuque/0/2023/png/32453655/1673683294089-f33d09d5-ea29-4369-a028-0a32c6ab4220.png#averageHue=%231d1e23&clientId=u16e5dcbb-7ba4-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=166&id=u043d1d81&margin=%5Bobject%20Object%5D&name=image.png&originHeight=207&originWidth=1118&originalType=binary&ratio=1&rotation=0&showTitle=false&size=10659&status=done&style=none&taskId=ue901d472-bcf6-49f1-acc0-7b97529e831&title=&width=894.4" alt="image.png"></p>
-
-            
-        </div>
-    </div>
-
-    <div class="post-tags">
-        
-        
-    </div>
-
-    <a href="/2023/01/14/Apifox&JSON&token/ " class="go-post">
-        阅读全文
-    </a>
-</div>
-
-<div class="post">
-
-    <a href="/2022/10/29/react-router v6/">
-        <h2>
-            
-        </h2>
-    </a>
-
-    <div class="category-and-date">
-
-        
-
-        <span class="date">
-            <span class="icon">
-                <a-icon type="calendar" theme="filled" />
-            </span>
-            2022/10/29
-        </span>
-
-    </div>
-
-    <div class="excerpt">
-        <div class="content" v-pre>
-            
-            
-            <p><a name="woiJC"></a></p>
-<h1 id="react-router-v6"><a href="#react-router-v6" class="headerlink" title="react-router v6"></a>react-router v6</h1><p><a name="pcje2"></a></p>
-<h2 id="路由组件"><a href="#路由组件" class="headerlink" title="路由组件"></a>路由组件</h2><p><a name="Jwypd"></a></p>
-<h3 id="BrowserRouter与HashRouter"><a href="#BrowserRouter与HashRouter" class="headerlink" title="BrowserRouter与HashRouter"></a>BrowserRouter与HashRouter</h3><p>作用：整体结构，用于包裹组件<br />区别：<br />一     path表现形式不一样：HashRouter含#，而BrowserRouter无<br />         例如：localhost:3000/#/demo/test      localhost:3000/demo/test<br />注：#后面的请求数据不会返回给后端，因此改变 hash 不会重新加载页面。<br />       HashRouter可解决一些路径错误问题<br />二     底层原理不一样：BrowserRouter使用的是H5的history API；HashRouter使用的是URL的哈希值<br />三     刷新后对路由state参数的影响：<br />BrowserRouter没有任何影响，因为state保存在history对象中；<br />HashRouter刷新后会导致路由state参数的丢失！<br /><img src="https://cdn.nlark.com/yuque/0/2022/png/32453655/1666974399682-2d70496d-e87d-4cd2-b6c0-effcc24604d9.png#clientId=ude8e2e54-fe34-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=124&id=ubfb406a1&margin=%5Bobject%20Object%5D&name=image.png&originHeight=155&originWidth=1203&originalType=binary&ratio=1&rotation=0&showTitle=false&size=14265&status=done&style=none&taskId=ua68fc469-419a-476b-beeb-65e13fe62ab&title=&width=962.4" alt="image.png"></p>
-<p><a name="amjmy"></a></p>
-<h3 id="Navigate"><a href="#Navigate" class="headerlink" title="Navigate"></a>Navigate</h3><p>只要这个组件渲染，立马修改路径，切换视图.<br />根据sum值切换视图：</p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sum==<span class="number">2</span> ? <span class="xml"><span class="tag">&lt;<span class="name">Navigate</span> <span class="attr">to</span>=<span class="string">&#x27;/about&#x27;</span> <span class="attr">replace</span>=<span class="string">&#123;true&#125;</span>&gt;</span> : <span class="tag">&lt;<span class="name">h4</span>&gt;</span>sum is not two.<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-<p>跳转模式：</p>
-<ul>
-<li>replace：覆盖原页面，不可回退</li>
-<li>push：默认，可回退</li>
-</ul>
-<p><a name="xS9Dj"></a></p>
-<h3 id="Routes-与-Route"><a href="#Routes-与-Route" class="headerlink" title="Routes 与 Route"></a>Routes 与 Route</h3><p><Routes />包裹<Route /><br /><Route  caseSensitive>是否区分大小写，默认false<br /><Route />可嵌套使用，可配合路由表<br /><Routes><br />&lt;Route indexpath=”/“ element={<Home />} /&gt;<br />&lt;Route path=”about” element={<About />} /&gt;<br />&lt;Route path=”/users/:id” element={<User />} /&gt;<br /></Routes></p>
-<p><a name="xxKvI"></a></p>
-<h3 id="useRoutes"><a href="#useRoutes" class="headerlink" title="useRoutes"></a>useRoutes</h3><p>将路由表抽离出来，形式上更加直观</p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> router = useRoutes([</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">path</span>:<span class="string">&#x27;/home&#x27;</span>,</span><br><span class="line">    <span class="attr">element</span>: <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>home...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">path</span>:<span class="string">&#x27;/about&#x27;</span>, </span><br><span class="line">    <span class="attr">element</span>: <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>aaa<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  &#125;</span><br><span class="line">]);</span><br><span class="line"><span class="comment">//然后在APP.tsx里面return useRoutes(router)</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>这个router数组就是路由表<br />可 const element = useRoutes(router)<br />然后将{element}放在想要的位置</p>
-<p><a name="nOelU"></a></p>
-<h3 id="useNavigate"><a href="#useNavigate" class="headerlink" title="useNavigate"></a>useNavigate</h3><p>可实现编程式路由导航</p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> navigate = useNavigate();</span><br><span class="line"><span class="comment">//后退</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">back</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  navigate(-<span class="number">1</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//前进</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">forward</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  navigate(<span class="number">1</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//跳转到指定位置,实现重定向</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">showDetail</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  navigate(<span class="string">&#x27;/about&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><a name="qod8t"></a></p>
-<h3 id="Outlet"><a href="#Outlet" class="headerlink" title="Outlet"></a>Outlet</h3><p>指定路由组件呈现的位置</p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="comment">//新生 J</span></span><br><span class="line">  <span class="attr">path</span>:<span class="string">&quot;/visitor&quot;</span>,</span><br><span class="line">    <span class="attr">element</span>:<span class="xml"><span class="tag">&lt;<span class="name">J_layout</span> /&gt;</span></span>,</span><br><span class="line">    children:[</span><br><span class="line">    &#123;<span class="attr">path</span>:<span class="string">&quot;&quot;</span>,<span class="attr">element</span>:<span class="xml"><span class="tag">&lt;<span class="name">Navigate</span> <span class="attr">to</span>=<span class="string">&quot;form&quot;</span> /&gt;</span></span>&#125;,</span><br><span class="line">    &#123;<span class="attr">path</span>:<span class="string">&quot;form&quot;</span>,<span class="attr">element</span>:<span class="xml"><span class="tag">&lt;<span class="name">AJ_form</span> /&gt;</span></span>&#125;,</span><br><span class="line">    &#123;<span class="attr">path</span>:<span class="string">&quot;progress&quot;</span>,<span class="attr">element</span>:<span class="xml"><span class="tag">&lt;<span class="name">AJ_progress</span> /&gt;</span></span>&#125;,</span><br><span class="line">    &#123;<span class="attr">path</span>:<span class="string">&quot;work&quot;</span>,<span class="attr">element</span>:<span class="xml"><span class="tag">&lt;<span class="name">AJ_work</span> /&gt;</span></span>&#125;,</span><br><span class="line">    ]</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;div className=<span class="string">&#x27;J-container&#x27;</span>&gt;</span><br><span class="line">  <span class="xml"><span class="tag">&lt;<span class="name">Header</span>&gt;</span><span class="tag">&lt;/<span class="name">Header</span>&gt;</span></span></span><br><span class="line">  <span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span>=<span class="string">&quot;J-body&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span>=<span class="string">&quot;J-box&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">ul</span> <span class="attr">className</span>=<span class="string">&quot;J-nav&quot;</span>&gt;</span>                  </span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">NavLink</span> <span class="attr">className</span>=<span class="string">&#123;computedName&#125;</span> <span class="attr">to</span>=<span class="string">&quot;/visitor/form&quot;</span>&gt;</span>报名表查看<span class="tag">&lt;/<span class="name">NavLink</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">NavLink</span> <span class="attr">className</span>=<span class="string">&#123;computedName&#125;</span> <span class="attr">to</span>=<span class="string">&quot;/visitor/progress&quot;</span>&gt;</span>进度查询<span class="tag">&lt;/<span class="name">NavLink</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">NavLink</span> <span class="attr">className</span>=<span class="string">&#123;computedName&#125;</span> <span class="attr">to</span>=<span class="string">&quot;/visitor/work&quot;</span>&gt;</span>作业查询<span class="tag">&lt;/<span class="name">NavLink</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span>=<span class="string">&quot;J-content&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">Outlet</span>&gt;</span><span class="tag">&lt;/<span class="name">Outlet</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-
-<p><a name="GDMAR"></a></p>
-<h2 id="传递参数的hooks"><a href="#传递参数的hooks" class="headerlink" title="传递参数的hooks"></a>传递参数的hooks</h2><p><a name="b9Kr7"></a></p>
-<h3 id="useParams"><a href="#useParams" class="headerlink" title="useParams"></a>useParams</h3><p>实现a组件传递参数给b组件</p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;Link to=<span class="string">&#x27;b/$&#123;item.id&#125;/$&#123;item.title&#125;/$&#123;item.content&#125;&#x27;</span>&gt;&lt;/Link&gt;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">children:[</span><br><span class="line">  &#123;<span class="attr">path</span>:<span class="string">&#x27;b/:id/:title/:content&#x27;</span>,</span><br><span class="line">   <span class="attr">element</span>:<span class="xml"><span class="tag">&lt;<span class="name">B</span> /&gt;</span></span>   </span><br><span class="line">  &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123;id,title,content&#125; = useParams();</span><br></pre></td></tr></table></figure>
-
-<p><a name="setja"></a></p>
-<h3 id="usesearchParams"><a href="#usesearchParams" class="headerlink" title="usesearchParams"></a>usesearchParams</h3><p>传递search参数<br />与useParams区别：在router制定路由表时无需占位<br />实现a组件给b组件传参</p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;Link to=&#123;<span class="string">&#x27;b?id=$&#123;item.id&#125;&amp;title=$&#123;item.title&#125;&amp;content=$&#123;item.content&#125;&#x27;</span>&#125;&gt;&lt;/Link&gt;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [search,setSearch] = usesearchParams();</span><br><span class="line"><span class="keyword">const</span> id = search.get(<span class="string">&#x27;id&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> title = search.get(<span class="string">&#x27;title&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> content = search.get(<span class="string">&#x27;content&#x27;</span>);</span><br></pre></td></tr></table></figure>
-
-<p>这里的setSearch是一个函数，可更新对应的search参数</p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;button onclick=&#123;<span class="function">()=&gt;</span>&#123;setSearch(<span class="string">&#x27;id=00&amp;&amp;title=&#x27;</span>detail<span class="string">&#x27;&amp;&amp;content=&#x27;</span><span class="built_in">this</span> is content<span class="string">&#x27;&#x27;</span>)&#125;&#125;&gt;&lt;/button&gt; </span><br></pre></td></tr></table></figure>
-
-<p><a name="IS0jY"></a></p>
-<h3 id="uselocation"><a href="#uselocation" class="headerlink" title="uselocation"></a>uselocation</h3><p>传递state参数<br />在router注册路由表时同样不需要占位<br />实现a组件传递参数给b组件</p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;Link to=<span class="string">&#x27;a&#x27;</span> state=&#123;<span class="attr">id</span>:item.id,<span class="attr">title</span>:item.title,<span class="attr">content</span>:item.content&#125;&gt;&lt;/Link&gt;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123;<span class="attr">state</span>:&#123;id,title,content&#125;&#125; = uselocation();<span class="comment">//连续解构赋值</span></span><br></pre></td></tr></table></figure>
-
-            
-        </div>
-    </div>
-
-    <div class="post-tags">
-        
-        
-    </div>
-
-    <a href="/2022/10/29/react-router v6/ " class="go-post">
-        阅读全文
-    </a>
-</div>
-
-<div class="post">
-
-    <a href="/2022/10/02/浏览器页面的阻塞渲染/">
-        <h2>
-            
-        </h2>
-    </a>
-
-    <div class="category-and-date">
-
-        
-
-        <span class="date">
-            <span class="icon">
-                <a-icon type="calendar" theme="filled" />
-            </span>
-            2022/10/2
-        </span>
-
-    </div>
-
-    <div class="excerpt">
-        <div class="content" v-pre>
-            
-            
-            <h2 id="浏览器关键渲染路径"><a href="#浏览器关键渲染路径" class="headerlink" title="浏览器关键渲染路径"></a>浏览器关键渲染路径</h2><p>这部分主要是，浏览器通过网络模块加载得到到HTML文件后的渲染流程<br><img src="https://cdn.nlark.com/yuque/0/2022/png/32453655/1664677108643-9943bc60-c49b-4508-9ddb-95529355c0ac.png#clientId=u7c50e314-48f6-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u190747ae&margin=%5Bobject%20Object%5D&originHeight=191&originWidth=927&originalType=url&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u8feadf4f-a628-4901-b5ef-e5401efcf63&title="></p>
-<p>首先浏览器拿到从服务端返回的html文件是由一堆字节构成的，随后转化为字符，即人能看懂的html代码。再转化为token，就像是符号标签。这里主要依赖html中标签的 &lt; 和 &gt; ，比如<body>是开始标签，</body>是结束标签。这样字符就被token化，不同字符就有了不同意义。下一步就是把token转化为节点对象，构建dom树。<br><img src="https://cdn.nlark.com/yuque/0/2022/png/32453655/1664677723783-0c7136e1-a7a3-4f64-a7a4-9f91067f5b03.png#clientId=u7c50e314-48f6-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=316&id=u21a9ec5e&margin=%5Bobject%20Object%5D&name=image.png&originHeight=401&originWidth=914&originalType=binary&ratio=1&rotation=0&showTitle=false&size=135937&status=done&style=none&taskId=u1fdb0fd0-7139-4446-9d23-4fbb0d5586f&title=&width=721.2000122070312" alt="image.png"></p>
-<p>其实返回的css文件的转化也类似，即字节到字符到token到节点，但最后一步是到CSSOM。CSSOM树，与DOM树结构相似，只是另外为每一个节点关联了样式信息。</p>
-<p>但CSSOM 和 DOM有一些区别，其中一个就是DOM可部分解析，而CSSDOM不能。试想<code>body&#123;font-size:16px;&#125;</code>又设置了<code>body div&#123;font-size:32px;&#125;</code>就会导致部分解析时字号为16px，造成页面样式混乱。</p>
-<p>DOM 和 CSSOM的结合即为渲染树，任务就是匹配DOM 和 CSSOM的节点，并且捕获可见内容。（比如有的标签<meta><link>等不会显示出来，CSSOM中设置display：none也不会显示）</p>
-<p>布局：获取渲染树的结构，节点的位置大小，依据盒子模型，盒子（对应节点）在页面上排列嵌套。简单说，就是把每个节点放到正确的位置。</p>
-<p>绘制：遍历渲染树绘制所有节点，为每一个节点适用对应的样式，这一过程是通过UI后端模块完成。</p>
-<h2 id="浏览器的阻塞渲染"><a href="#浏览器的阻塞渲染" class="headerlink" title="浏览器的阻塞渲染"></a>浏览器的阻塞渲染</h2><h3 id="CSS阻塞"><a href="#CSS阻塞" class="headerlink" title="CSS阻塞"></a>CSS阻塞</h3><p>注意：只有link引入的外部css才能产生阻塞；不阻塞DOM的解析<br>主要阻塞DOM树渲染以及后面js语句的执行</p>
-<link href="index.css" rel="stylesheet">
-<link href= "print.css" rel="stylesheet" media="print">
-<link href="other.css" rel="stylesheet" media="(min-width: 30em) and (orientation: landscape)">
-
-<p>第一个会加载并阻塞；<br>第二个只在打印的时候会加载但不阻塞；<br>第三个提供了媒体查询，会在符合条件时阻塞渲染。</p>
-<p>有时可以利用这种阻塞，避免闪屏。原因：比如style标签里面的css不阻塞渲染，导致CSS很可能在渲染结束后生效，若渲染结束时CSS和后边新生效的CSS不同，那很显然会改变显示效果。</p>
-<h3 id="js阻塞"><a href="#js阻塞" class="headerlink" title="js阻塞"></a>js阻塞</h3><p>js会阻塞DOM树的解析和渲染，以及后面js语句的执行</p>
-<p>阻塞dom解析：如果浏览器把后续dom节点加载完，而js若把dom节点删除，浏览器就做了无用功。浏览器无法预估脚本里面具体做了什么操作，例如像document.write 这种操作，索性全部停住，等脚本执行完了，浏览器再继续向下解析DOM。    </p>
-<p>阻塞dom渲染：js可以操作dom也可以修改节点样式，为避免出现差错，就等js执行完再渲染。</p>
-<p>阻塞后续js执行：js语句之间可能有依赖关系。</p>
-<h3 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h3><ul>
-<li> CSS的解析和JS的执行是互斥的（互相排斥），CSS解析的时候JS停止执行，JS执行的时候CSS停止解析。</li>
-<li> CSS阻塞和JS阻塞都不会阻塞浏览器加载外部资源（图片、视频、样式、脚本等）。原因：浏览器始终处于一种：“先把请求发出去” 的工作模式，只要是涉及到网络请求的内容，都会先发送请求去获取资源，至于资源到本地之后什么时候用，由浏览器自己协调。</li>
-</ul>
-
-            
-        </div>
-    </div>
-
-    <div class="post-tags">
-        
-        
-    </div>
-
-    <a href="/2022/10/02/浏览器页面的阻塞渲染/ " class="go-post">
-        阅读全文
-    </a>
-</div>
-
-<div class="post">
-
-    <a href="/2022/05/07/JavaScript垃圾回收/">
-        <h2>
-            
-        </h2>
-    </a>
-
-    <div class="category-and-date">
-
-        
-
-        <span class="date">
-            <span class="icon">
-                <a-icon type="calendar" theme="filled" />
-            </span>
-            2022/5/7
-        </span>
-
-    </div>
-
-    <div class="excerpt">
-        <div class="content" v-pre>
-            
-            
-            <h2 id="js垃圾回收"><a href="#js垃圾回收" class="headerlink" title="js垃圾回收"></a>js垃圾回收</h2><h2 id="一什么是垃圾"><a href="#一什么是垃圾" class="headerlink" title="一什么是垃圾"></a>一什么是垃圾</h2><p>从生活中的角度可知，垃圾，就是人们不再需要的东西。在js中也一样，垃圾就是不再需要的变量。js通过自动内存管理实现内存分配和闲置资源回收，基本思路就是确定哪个变量不会再被用到了，就释放它占用的内存。</p>
-<p><strong>全局变量</strong><br>在全局作用域下声明的变量都不是垃圾，因为你有可能再次使用到<br>比如在全局作用域下 var m=3<br>可能一开始m变量不会被用到，但在写多行代码后用到m，这时m就存在被用到的可能性，所以在js中不会被当做垃圾回收<br><strong>局部变量</strong><br>例子 function fn(）{<br>  var b=2;<br>  console.log(b);<br>}<br>当fn函数执行时，会创建b变量，栈（或堆）内存会分配空间以保存相应的值。如果fn多次执行，且每次的变量b都不会被回收的话，是不是会产生很多的变量b，这样明显是不合理的。<br>所以局部变量在函数执行完后变成垃圾会被回收<br><strong>单引用</strong><br> let a=1；<br>let a=null；<br>一开始变量a开辟的内存空间存放1 ，但当值为null时，空间就没有作用了，变成垃圾被回收<br><strong>双引用</strong><br>let fruit={<br> name:”apple”<br>}；<br>let food = fruit;<br>在windows上定义一个对象fruit，具有name属性。之后定义一个food变量指向fruit的内存空间。<br>这时如果想清除这片开辟的内存空间，就必须把fruit和food两个变量都清除，垃圾才能被回收干净<br><strong>环引用</strong><br>function marry(man, woman) {<br>  woman.husband = man;<br>  man.wife = woman;</p>
-<p>  return {<br>    father: man,<br>    mother: woman<br>  }<br>}</p>
-<p>let family = marry({<br>  name: “John”<br>}, {<br>  name: “Ann”<br>});<br><img src="https://img-blog.csdnimg.cn/c44df59c7f9a4ab59a0b157055c5cce1.png" alt="在这里插入图片描述"></p>
-<p>在一个family中，如果只去掉father和husband，此时name：“john”还存在，因为还存在wife可以引用john（即箭头指向）。<br>只有将所有指向该变量的对象清除才能够将该变量作为垃圾处理</p>
-<h2 id="二标记清理"><a href="#二标记清理" class="headerlink" title="二标记清理"></a>二标记清理</h2><p>标记清理是 js 中最常用的垃圾回收策略：当变量进入上下文，如在函数中声明一个变量时，这个变量会被加上存在于上下文中的标记。当变量离开上下文时，也会被加上离开上下文的标记。<br>垃圾回收程序运行：</p>
-<ul>
-<li>首先将内存中所有的变量标记好</li>
-<li>然后去掉   还在上下文中的变量  或者  被还在上下文中变量引用的变量  的标记，此时还有标记的就是要被删除的</li>
-<li>随后垃圾回收程序做一次内存清理，销毁带标记的所有值并收回它们的内存</li>
-</ul>
-<p> 给变量加标记的方法有很多。比如，当变量进入上下文时，反转某一位；或者可以维护“在上下文中”和“不在上下文中”两个变量列表，可以把变量从一个列表转移到另一个列表。</p>
-<h2 id="三引用计数"><a href="#三引用计数" class="headerlink" title="三引用计数"></a>三引用计数</h2><p>这是一种没那么常用的垃圾回收策略，思路是对每个值都记录它被引用的次数，当引用次数为0时变量就会被垃圾回收程序清理。<br>let obj1 = {name: ‘张三’};  // 创建对象（称其为 a），给 obj1 赋值，则其引用次数为1<br>let obj2 = obj1;  // a 的引用次数为 2</p>
-<p>obj1 = null;  // a 的引用次数为 1<br>obj2 = null;  // a 的引用次数为 0，此时 a 就可以被垃圾回收了</p>
-<p>声明一个变量并给它赋一个引用值时，引用数为1；如果同一个值又被赋给另一个变量，引用数加1；类似的，如果保存对该值引用的变量被其他值覆盖了，引用数减1</p>
-<p>问题：<strong>循环引用</strong><br>function f() {<br>    let obj1 = {};<br>    let obj2 = {};<br>    obj1.a=obj2;<br>    obj2.a=obj1;<br>}<br>此时obj1和obj2通过各自的a属性相互引用，两者引用数都是2，当f函数执行完毕后，在引用技术策略下obj1和obj2还存在，因为它们的引用数永远不会变成0<br>要解决这个问题，最好就是在不使用它们的时候将其设为 null </p>
-<h2 id="四前端垃圾回收的特殊性"><a href="#四前端垃圾回收的特殊性" class="headerlink" title="四前端垃圾回收的特殊性"></a>四前端垃圾回收的特殊性</h2><p>对于前端而言，不仅有 js 进程，还有 DOM 进程。</p>
-<p><strong>（1）使用 remove 清除掉 dom 元素</strong><br>（remove() 方法移除被选元素，包括所有文本和子节点）<br>let div=document.getElementById(‘root’);<br>div.onclick=function(){};<br>div.remove();<br>console.log(div.onclick);            //f(){}</p>
-<p>可见onclick未被清除掉</p>
-<p><strong>（2）将其变为 null</strong><br>let div=document.getElementById(‘root’);<br>let div2=document.getElementById(‘root’);<br>div.onclick=function(){};<br>div=null;<br>console.log(div2.onclick);//f(){}</p>
-<p>可见onclick也还未被清除掉。<br>但此时打印div.onclick会报错，因为此时div已经为null了</p>
-<p><strong>（3）同时使用 remove 和 null</strong><br>let div=document.getElementById(‘root’);<br>let div2=document.getElementById(‘root’);<br>div.onclick=function(){};<br>div=null;<br>div.remove();<br>console.log(div2.onclick);//null</p>
-<p>可以看出这个 onclick 事件被清除掉了。所以对于前端而言，不仅要清除 js 进程，还要清除 dom 进程。</p>
-
-            
-        </div>
-    </div>
-
-    <div class="post-tags">
-        
-        
-    </div>
-
-    <a href="/2022/05/07/JavaScript垃圾回收/ " class="go-post">
-        阅读全文
-    </a>
-</div>
-
-<div class="post">
-
-    <a href="/2022/04/13/小程序踩坑记/">
-        <h2>
-            
-        </h2>
-    </a>
-
-    <div class="category-and-date">
-
-        
-
-        <span class="date">
-            <span class="icon">
-                <a-icon type="calendar" theme="filled" />
-            </span>
-            2022/4/13
-        </span>
-
-    </div>
-
-    <div class="excerpt">
-        <div class="content" v-pre>
-            
-            
-            <h2 id="一-react错误-Minified-React-error-185"><a href="#一-react错误-Minified-React-error-185" class="headerlink" title="一 react错误 Minified React error #185;"></a>一 react错误 Minified React error #185;</h2><p>原因：render函数不能使用setState()，否则会导致页面死循环<br><img src="https://img-blog.csdnimg.cn/02f0c6e3889d418395ef9a0fb467425a.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5biM55-jYQ==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="摘录"><br>上图摘自其他博主</p>
-<h2 id="二-有关Taro-showToast"><a href="#二-有关Taro-showToast" class="headerlink" title="二 有关Taro.showToast"></a>二 有关Taro.showToast</h2><p>如果只写title的话，最多只展示7个文字<br>如果再加      icon：‘none’    此时 title 文本最多可显示两行<br><img src="https://img-blog.csdnimg.cn/099542250aec4ae19717f7d42ff47c01.png" alt="示例代码"></p>
-<h3 id="既然提到taro了，再插一句：发现表单组件的Input-居然没有-onChange-事件"><a href="#既然提到taro了，再插一句：发现表单组件的Input-居然没有-onChange-事件" class="headerlink" title="既然提到taro了，再插一句：发现表单组件的Input 居然没有 onChange 事件"></a>既然提到taro了，再插一句：发现表单组件的Input 居然没有 onChange 事件</h3><h2 id="三-小程序记住账户密码功能"><a href="#三-小程序记住账户密码功能" class="headerlink" title="三 小程序记住账户密码功能"></a>三 小程序记住账户密码功能</h2><p>效果：用户一扫码登录，自动显示    账户     密码（小黑圈显示），类似QQ的记住密码。<img src="https://img-blog.csdnimg.cn/02836374f46249d5aebb4594b46dc4b1.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5biM55-jYQ==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="示例代码"><br>实现：用户初次登录，拿到学号密码存入本地缓存（通过Taro.setStorage实现），此时生成用户的token，也存入本地缓存。<br>此后再登录，直接判断if（token）就可以，如果是真，直接页面跳转，否则显示弹窗。<br>那么如何实现记住账户密码呢？<br>代码如上，在react类组件的生命周期函数中setstate，值来源于本地缓存中的student—id 与 password  。在render函数中，input组件的value值（而不是placeholder）也设为student—id 与 password 。</p>
-<h2 id="四-对数组中不同类元素进行不同操作"><a href="#四-对数组中不同类元素进行不同操作" class="headerlink" title="四 对数组中不同类元素进行不同操作"></a>四 对数组中不同类元素进行不同操作</h2><h5 id="实现：首先用map方法遍历数组，再进行if-else判断是否同类，最后return，在页面上展示数据"><a href="#实现：首先用map方法遍历数组，再进行if-else判断是否同类，最后return，在页面上展示数据" class="headerlink" title="实现：首先用map方法遍历数组，再进行if else判断是否同类，最后return，在页面上展示数据"></a>实现：首先用map方法遍历数组，再进行if else判断是否同类，最后return，在页面上展示数据</h5><p>array.map((item) =&gt; {<br>    if(item.name==’1’){<br>        return()<br>    }else{<br>    return()<br>}<br>})</p>
-<p>如上代码在jsx的render函数中<br>效果：类似QQ聊天框，name为1的人发送的消息显示在左边，气泡浅色；name不是1的人发送的消息显示在右边，气泡深色。</p>
-<h2 id="五-函数之间的传参"><a href="#五-函数之间的传参" class="headerlink" title="五 函数之间的传参"></a>五 函数之间的传参</h2><p>假设有a b两个函数，现在a函数return一个值为m，b函数想接收到这个m值<br>实现：function a（）{<br>    。。。。<br>    return{<br>        m<br>}<br>}</p>
-<p>function b（）{<br>    var xx = this.a;<br>    console.log(xx.m);<br>}<br>此时b函数输出的即为m值<br><img src="https://img-blog.csdnimg.cn/1e3d4b12949347138a5f19a02f6d97b3.png" alt="示例代码"></p>
-<h2 id="六-点击发送键，即可发送消息"><a href="#六-点击发送键，即可发送消息" class="headerlink" title="六 点击发送键，即可发送消息"></a>六 点击发送键，即可发送消息</h2><h5 id="实现：在constructor函数里面初始化state，声明一个数组msglist，此后每点击一次发送键，就利用一次数组的push方法"><a href="#实现：在constructor函数里面初始化state，声明一个数组msglist，此后每点击一次发送键，就利用一次数组的push方法" class="headerlink" title="实现：在constructor函数里面初始化state，声明一个数组msglist，此后每点击一次发送键，就利用一次数组的push方法"></a>实现：在constructor函数里面初始化state，声明一个数组msglist，此后每点击一次发送键，就利用一次数组的push方法</h5><p><img src="https://img-blog.csdnimg.cn/a9a366cfa0cc4d42b53a7b27d6ae9f80.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5biM55-jYQ==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="示例代码"></p>
-<h5 id="注意：这里多加了一个copy，否则会报错，应该是内置原生js的性能，具体不清楚"><a href="#注意：这里多加了一个copy，否则会报错，应该是内置原生js的性能，具体不清楚" class="headerlink" title="注意：这里多加了一个copy，否则会报错，应该是内置原生js的性能，具体不清楚"></a>注意：这里多加了一个copy，否则会报错，应该是内置原生js的性能，具体不清楚</h5>
-            
-        </div>
-    </div>
-
-    <div class="post-tags">
-        
-        
-    </div>
-
-    <a href="/2022/04/13/小程序踩坑记/ " class="go-post">
-        阅读全文
-    </a>
-</div>
-
-<div class="post">
-
-    <a href="/2022/03/18/关于http/">
-        <h2>
-            
-        </h2>
-    </a>
-
-    <div class="category-and-date">
-
-        
-
-        <span class="date">
-            <span class="icon">
-                <a-icon type="calendar" theme="filled" />
-            </span>
-            2022/3/18
-        </span>
-
-    </div>
-
-    <div class="excerpt">
-        <div class="content" v-pre>
-            
-            
-            <h2 id="一-http"><a href="#一-http" class="headerlink" title="一 http"></a>一 http</h2><p>1 http是无状态协议，自身不对请求和响应之间的通信状态进行保存，这使得http是比较简单的，可以更快处理大量事务，确保协议的可伸缩性。</p>
-<p>2  http用于客户端与服务端之间的通信，一个普通的请求包括：客户端向服务端发出请求，服务端处理请求，服务端将结果响应给客户端。</p>
-<p>3 与http关系密切的协议：IP TCP DNS<br>（TCP/IP协议族按层次分为：应用层、网络层、传输层、链路层）<br><strong>IP协议</strong>:  位于网络层，作用是把各种数据包传递给对方，而要保证确实传送到对方那里， 则需要满足各类条件。 其中两个重要的条件是 IP 地址和 MAC地址 。 IP地址指明了节点被分配到的地址，可变换；Mac地址是指网卡所属的固定位置，基本不会更改。</p>
-<p><strong>TCP协议</strong>：位于传输层，提供可靠的字节流服务（将大块数据分割成以报文段为单位的数据包进行管理）。TCP的三次握手：发送端首先将标有SYN标志的数据包发给对方，接收端收到后回传一个带有SYN/ACK标志的数据包来确认收到信息，最后发送端再回传一个带ACK标志的数据包代表“握手”结束。</p>
-<p><strong>DNS服务</strong>：位于应用层，提供域名到IP地址的解析服务（通过域名查找IP地址或者逆向从IP地址反查域名）。<br><img src="https://img-blog.csdnimg.cn/276ebb0e190c452db861273a6f2c3d4b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5p6r5qGl77yG5pyI5b2x,size_16,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-<h2 id="二-cookie"><a href="#二-cookie" class="headerlink" title="二 cookie"></a>二 cookie</h2><p><strong>基本介绍</strong>：1  当一个浏览器访问某web服务器时，web服务器会调用addCookie()方法，在响应头中添加一个名叫Set-Cookie的响应字段用于将Cookie返回给浏览器，当浏览器第二次访问该web服务器时会自动的将该cookie回传给服务器，来实现用户状态跟踪。</p>
-<p>2  每一个cookie都有一个name和一个value，且name属性是唯一的。每个web浏览器储存多个web站点的cookie，浏览器一般只允许存放300个Cookie，每个站点最多存放20个Cookie，每个Cookie的大小限制为4KB。</p>
-<p><strong>分类：会话级别 or 持久化</strong><br>1 会话级别的cookie储存在浏览器的内存中，用户关闭浏览器后删除。</p>
-<p>2 持久化的cookie存储在浏览器目录下的文件（磁盘）中，这需要设置该cookie的生命周期setMaxAge，以秒为单位，优先级别高于expires，类似定时器代表过了多久浏览器删除该cookie。</p>
-<p><strong>cookie的作用域</strong><br>cookie的domain和path属性定义了cookie的作用范围，即访问哪些网站或url时，会自动的带着该cookie。domain即域名，默认是当前主机(不包括子域名)，path默认是*(所有路径)，即域名后面的的路径。大部分情况下我们都是使用默认的设置即可。</p>
-<h2 id="三-session"><a href="#三-session" class="headerlink" title="三 session"></a>三 session</h2><p><strong>基本介绍</strong>：web服务器中会开辟一块内存用来保存服务器端所有的session，每个session都会有一个唯一标识sessionid，根据客户端传过来的jsessionid(cookie中)，找到对应的服务器端的session。为了防止服务器端的session过多导致内存溢出，web服务器默认会给每个session设置一个有效期,    （30分钟）若有效期内客户端没有访问过该session，服务器就认为该客户端已离线并删除该session。</p>
-<p><strong>保存sessionid的方式</strong></p>
-<p>1 放在cookie中，通过一个特殊的cookie，name为JSESSIONID，value为服务器端某个 session的ID，默认的方式。但是当浏览器禁用cookie后session就会失效。</p>
-<p>2 附加在url路径后面，在cookie浏览器被禁用时启用。可作为附加信息添在url后面或作为查询字符串加在url后面</p>
-<p><strong>基本原理</strong></p>
-<p>当用户发送请求到服务器后，先检查请求中是否含有sessionid，如果没有说明是第一次访问，服务器就会创建一个session对象，并将sessionid附加到set-cookie的响应头中。<br>如果存在sessionid就会到服务器查找对应的session。所以说，服务器端的session和客户端的cookie是息息相关的，若是没有了cookie，又不做其他处理的话，服务器端的session也没了。</p>
-<p><strong>question：关闭浏览器后session会消失吗？</strong><br>tip：从服务端和浏览器端考虑。</p>
-<h2 id="四-token"><a href="#四-token" class="headerlink" title="四 token"></a>四 token</h2><p><strong>基本介绍</strong>：token可理解为“令牌”，是全局唯一的一个字符串，用来识别唯一的客户端。token解决了session依赖于单个Web服务器的问题，session只存在于单一服务器中，而在web服务器集群环境下需要用户多次登录，使得用户体验很不好。比如，某人在a服务器上登录过一次，这时跳转到b服务器但依靠session就还得再登录一次。</p>
-<p><strong>基本原理</strong>：模拟cookie、session的机制。根据“cookie中根据sessionid来查找服务器端session的”，<strong>生成客户端唯一字符串</strong>；使用redis的哈希类型来模型服务器端的session，<strong>得到服务端会话信息存储</strong>，再让二者匹配。</p>
-<p>我们可以在用户第一次请求该web服务器时或是用户登录该web服务器时，生成一个全局唯一的token返回给前端存储，同时将该用户信息存到redis中并设置有效期，之后每次请求中都在请求头中带着这个token，服务器端根据这个token到redis中查找对应的用户信息，即得到了我们所说的 “session”。</p>
-<h2 id="总结cookie-session-token"><a href="#总结cookie-session-token" class="headerlink" title="总结cookie session token"></a>总结cookie session token</h2><p><strong>cookie</strong>：一种数据载体，把session放在cookie中送到客户端那边去，之后cookie跟着每个请求头发给服务端。</p>
-<p><strong>session</strong>：诞生并保存在服务器中，由服务器主导一切。</p>
-<p><strong>token</strong>：诞生于服务器，保存于浏览器，由客户端主导一切，可以放在cookie或storage里，持“令牌”访问服务器。</p>
-
-            
-        </div>
-    </div>
-
-    <div class="post-tags">
-        
-        
-    </div>
-
-    <a href="/2022/03/18/关于http/ " class="go-post">
-        阅读全文
-    </a>
-</div>
-
-<div class="post">
-
-    <a href="/2021/11/26/postName/">
-        <h2>
-            Function(javaScript)
-        </h2>
-    </a>
-
-    <div class="category-and-date">
-
-        
-
-        <span class="date">
-            <span class="icon">
-                <a-icon type="calendar" theme="filled" />
-            </span>
-            2021/11/26
-        </span>
-
-    </div>
-
-    <div class="excerpt">
-        <div class="content" v-pre>
-            
-            
-            <p>#函数的概念及优势<br>概念：简单来说就是封装了一段可被重复执行调用的代码块，是JavaScript编程的基础。<br>优势：让大量代码重复使用，减少重复，同时使子程序间相互隔离。</p>
-<p>#函数的使用（声明、调用）<br>一. 函数的声明：（两种）<br>1.function 函数名（）{<br>函数体代码<br>}<br>2.var 函数名 = function（）{<br>函数体代码<br>}<br>注：1.function为函数关键词，小写<br>2.函数名一般命名为动词，如getResult<br>3.括号内为形参，若有多个用逗号分开</p>
-<p>二 .函数的调用：<br>函数名（ ）；<br>注：1.只有调用函数才会执行函数体代码<br>2.括号内为实参，若有多个用逗号分开</p>
-<p>函数的封装：<br>把一个或者多个功能通过函数的方式封装起来，对外只提供一个简单的函数接口<br>（简单理解：将电脑配件整合组装到机箱中）</p>
-<p>#函数的参数，return，arguments<br>一： 函数的参数（形参，实参）<br>形参：形式上的参数（声明函数时），是接收实参的，类似于一个不用声明的变量，默认undefined<br>实参：实际上的参数（函数调用时）</p>
-<p>形参、实参的匹配问题：<br>形参&gt;实参：NaN，被赋值为undefined<br>形参&lt;实参：忽略额外的实参<br>注：1.函数可为无参数<br>2.若多余的形参后面写=运算符，后跟一个表达式，那么将在未给出某参数时用此表达式的值替换该参数。<br>function getsum(a,b=2){<br>let sum=1;<br>for(let counter=0;counter&lt;b;counter++){<br>sum=sum*a;<br>}<br>return sum;<br>}<br>console.log(getsum(2));//4<br>console.log(getsum(2,4));//16</p>
-<p>二：返回值return<br>1.在函数体内部，return后面的代码不执行<br>2.return只能返回一个值，若需要返回多个值可包含在一个数组内<br>3.函数若无return，则返回undefined<br>4.区分break，continue，return<br>break：跳出循环体<br>continue：跳出本次循环体，进行下一次<br>return：退出循环，返回值，结束后面的代码</p>
-<p>三：arguments（函数内置的）<br>arguments存储了传递过来的所有实参，以伪数组形式可进行遍历</p>
-<p>#作用域（变量在某个范围内起作用）<br>一. 全局作用域、局部作用域（函数作用域）、块级作用域（ES6新增）<br>全局作用域：整个script标签内，或单个js文件<br>函数作用域：顾名思义，只在函数内部起作用效果<br>块级作用域：由 { } 包括，if语句和for语句里面的{ }也属于块作用域<br>注：词法作用域，就是在写代码时将变量和块作用域写在哪里来决定，也就是词法作用域是静态的作用域，在书写代码时就确定了。</p>
-<p>二. 作用域链<br>概念：根据内部函数可以访问外部函数变量的这种作用机制，用链式查找决定哪些数据能被内部访问<br>注：站在目标出发，一层层往外查找（类似就近原则）<br>function f1(){<br>var num =1;<br>function f2(){<br>var num=0;//*<br>console.log(num);//目标<br>}<br>f2();<br>}<br>var num =3;<br>f1();<br>//结果是0 如果去掉*行，结果是1</p>
-<p>#箭头函数<br>概念：函数的第三种表示方法，由 =&gt; 代替function关键字，便于以较简明方式编写小型函数表达式<br>const square1 = （x）=&gt; {return x*x}；</p>
-<p>const horn = （）=&gt; {<br>cosole.log（“toot”）；<br>}<br>注：1.箭头位于参数列表之后，后接函数体，表达类似“这个输入（参数）产生这个结果的意思”<br>2.如果没有参数或有两个及以上，不能省略括号；有一个参数，可以省略<br>3.如果函数体是单个表达式，而不是{ }中的块，函数将返回这个表达式<br>4.箭头函数相当于匿名函数，并且简化了函数定义。箭头函数有两种格式，一种只包含一个表达式，省略掉了{ … }和return。还有一种可以包含多条语句，这时候就不能省略{ … }和return<br>5.用小括号包含大括号则是对象的定义，而非函数主体<br>x =&gt; {key: x} // 报错<br>x =&gt; ({key: x}) // 正确<br>6.箭头函数内部的this是词法作用域，由上下文确定。<br>7.var、const、let区别<br>var定义的变量，没有块的概念，可以跨块访问, 不能跨函数访问。<br>let定义的变量，只能在块作用域里访问，不能跨块访问，也不能跨函数访问。<br>const用来定义常量，使用时必须初始化(即必须赋值)，只能在块作用域里访问，而且不能修改。</p>
-<p>#调用栈(call stack)<br>概念：一种栈结构,它用来存储计算机程序执行时候其活跃子程序的信息。（比如什么函数正在执行，什么函数正在被这个函数调用等等信息）<br>栈：动态分配的空间，维护函数调用的上下文。只有一个口可供进出，先入在底，后入在顶，先进后出。<br>堆：队列优先，先进先出。<br>栈帧：每次函数调用后，都会在调用栈上维护一个独立的栈帧。<br>function boo (a) {<br>return a * 3<br>}<br>function foo (b) {<br>return boo(4) * 2<br>}<br>console.log(foo(3))<br>过程：先形成一个栈帧，调用foo函数，又形成一个栈帧，新形成的栈帧压在之前栈帧的上面。由于foo函数里面又调用了boo函数，则又形成一个新的栈帧。当boo函数执行完后，返回值给foo函数，boo被推出调用栈。之后foo函数继续执行，返回值给console.log后被推出调用栈，直至最后console.log也被推出栈，程序执行完毕。</p>
-<p>#递归<br>概念：在程序中函数直接或间接调用自身。将一个问题由难化易，由繁化简，由复杂化简单的过程称为化归，它是转化和归结的简称。<br>function fun(n) {<br>…<br>fun(n-1);<br>}<br>注：由于递归里面很容易发生“栈溢出”，所以必须加退出条件return。</p>
-<p>#闭包(closure)<br>概念：引用了自由变量的函数。指一个函数与周围状态（词法环境）的引用捆绑在一起（封闭）的组合，在JavaScript中，每次创建函数时，都会同时创建闭包。<br>闭包是一种保护私有变量的机制，在函数执行时形成私有的作用域，保护里面的私有变量不受外界干扰，即形成一个不销毁的栈环境。<br>function a(){<br>var i=0;<br>function b(){<br>alert(++i);<br>}<br>return b;<br>}</p>
-<p>var c = a();<br>c();<br>当函数a的内部函数b，被函数a外一个变量引用时，就创建了一个闭包。</p>
-<p>#添加函数的时机<br>1.当多次编写类似的代码时，可以把重复的功能提取出来，找到一个好名称，并将其放入一个函数中。<br>2.需要一些尚未编写的功能，并且似乎它应该有自己的函数。于是从命名函数开始，然后编写函数体。<br>注：具有简单明了的好名字函数，使读代码的人更容易清楚它们的功能，并且函数能在更多情况下使用。</p>
-<p>#副作用与纯函数<br>一 .函数副作用<br>当调用函数时，除了返回函数值之外，还对主调用函数产生附加的影响。（如修改了一个变量、改变数据结构、出现异常或终止、读取一个文件等）<br>这会降低程序可行性，带来不必要的麻烦。</p>
-<p>二 .纯函数<br>一种特定的产生值的函数。函数与外界交换数据只有一个唯一渠道——参数和返回值<br>优势：1.无副作用，不依赖于其他代码产生的副作用<br>2.当使用相同参数调用时，总是生成相同的值（只要参数不变，函数的值始终不变）<br>3.可以通过简单的调用来测试它</p>
-
-            
-        </div>
-    </div>
-
-    <div class="post-tags">
-        
-        
-    </div>
-
-    <a href="/2021/11/26/postName/ " class="go-post">
-        阅读全文
-    </a>
-</div>
-
-<div class="post">
-
-    <a href="/2021/10/17/hello-world/">
-        <h2>
-            Hello World
-        </h2>
-    </a>
-
-    <div class="category-and-date">
-
-        
-
-        <span class="date">
-            <span class="icon">
-                <a-icon type="calendar" theme="filled" />
-            </span>
-            2021/10/17
-        </span>
-
-    </div>
-
-    <div class="excerpt">
-        <div class="content" v-pre>
-            
-            
-            <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-            
-        </div>
-    </div>
-
-    <div class="post-tags">
-        
-        
-    </div>
-
-    <a href="/2021/10/17/hello-world/ " class="go-post">
-        阅读全文
-    </a>
-</div>
-
-
-             
-<div class="page-current">
-
-    <div class="prev">
-        
-    </div>
-
-    <div class="page-index">
-
-        
-
-        <span class="current">
-            1
-        </span>
-
-        
-
-    </div>
-
-    <div class="next">
-        
-    </div>
-
-</div>
-
-        </div>
-    </div>
+<div class="progress-bar-container">
     
-    <div id="home-card">
-        <a-affix :offset-top="card_top">
-    <a-card class="card-style" style="width: 300px">
-        <div class="avatar">
-            <img src="images/avatar.png " alt="头像">
-        </div>
-        <div class="name">
-            John Doe
-        </div>
-        <div class="descriptions">
-            
-            <div class="description">
-                正しさなんてもの
-            </div>
-            
-            <div class="description">
-                人のモノサシによって変わる
-            </div>
-            
-        </div>
-        <div class="icon-links">
-            
-            <span class="icon-link">
-                <a target="_blank" rel="noopener" href="https://github.com/korilin">
 
-                    
-                    <a-icon type="github"
-                        theme="filled" />
-                    
-                </a>
-            </span>
-            
-            <span class="icon-link">
-                <a target="_blank" rel="noopener" href="https://twitter.com/korilin_dev">
-
-                    
-                    <a-icon type="twitter"
-                        theme="" />
-                    
-                </a>
-            </span>
-            
-        </div>
-        <div class="friend-links">
-            
-            <div class="friend-link">
-                <a target="_blank" rel="noopener" href="https://en.korilin.com">
-                    英文技术博客
-                </a>
-            </div>
-            
-            <div class="friend-link">
-                <a target="_blank" rel="noopener" href="https://jp.korilin.com">
-                    日语记录博客
-                </a>
-            </div>
-            
-        </div>
-    </a-card>
-</a-affix>
-    </div>
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="swup-progress-icon">
+            <i class="fa-solid fa-circle-notch fa-spin"></i>
+        </span>
     
 </div>
-                     
-<footer id="footer">
-    <div class="footer-wrap">
-        <div>
-            © 2018 - 2023 Hexo
-            <span class="footer-icon">
-                <a-icon type="flag" theme="filled" /></span>
-            @John Doe
-        </div>
-        <div></div>
-        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
-                target="_blank" rel="noopener" href="https://github.com/korilin/hexo-theme-particle">Particle Theme</a></div>
+
+
+<main class="page-container" id="swup">
+
+    
         
-    </div>
-
-</footer>
-
-<script src="/js/highlight.min.js"></script>
-<script src="/js/particle.js"></script>
-                </div>
-            </div>
-        </transition>
-    </div>
-
-    <script>
-    new Vue({
-        el: "#layout",
-        data: {
-            show_page: false,
-            onload_menu: false,
-            menu_show: false,
-            card_top: 100
-        },
-        created: function () {
-            var that = this
-            window.onload = function () {
-                that.show_page = true
-                document.getElementById("loadcontent").style.opacity = 0
-                setTimeout(function () {
-                    document.getElementById("loadleft").style.width = 0
-                    document.getElementById("loadright").style.width = 0
-                }, 300)
-                setTimeout(function () {
-                    document.getElementById("loading").style = "display:none"
-                }, 600)
-            }
-        },
-        mounted: function () {
-            var that = this
-            window.addEventListener('scroll', function (e) {
-                that.menu_show = false
-            })
-        },
-        methods: {
-            home_click: function () {
-                window.scrollTo({
-                    top: window.innerHeight - 80,
-                    behavior: "smooth",
-                });
-            }
+    <style>
+        .home-banner-container {
+            background: transparent !important;
         }
-    })
+
+        .home-article-item,
+        .sidebar-links,
+        .sidebar-content,
+        a.page-number,
+        a.extend,
+        .sidebar-links .links:hover,
+        .right-bottom-tools,
+        footer.footer {
+            background-color: var(--background-color-transparent-80) !important;
+        }
+
+        .right-bottom-tools:hover,
+        a.page-number:hover,
+        a.extend:hover {
+            background-color: var(--primary-color) !important;
+        }
+
+        .site-info,
+        .home-article-sticky-label {
+            background-color: var(--background-color-transparent-15) !important;
+        }
+
+        .home-article-sticky-label {
+            backdrop-filter: none !important;
+        }
+    </style>
+
+    <div class="home-banner-background transition-fade">
+    </div>
+
+
+<div class="home-banner-container flex justify-center items-center transition-fade">
+    <div class="content flex justify-center items-center">
+        <div class="description flex flex-col justify-center items-center"
+        
+        >
+            Theme Redefine
+            
+            
+                <p><i id="subtitle"></i></p>
+            
+        </div>
+        
+    </div>
+</div>
+
+
+
+    
+
+    <div class="main-content-container">
+
+
+        <div class="main-content-header">
+            <header class="navbar-container">
+    
+    <div class="navbar-content has-home-banner">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                <h1>
+                Theme Redefine
+                </h1>
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="active" 
+                                    href="/"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-house"></i>
+                                        
+                                        HOME
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="navbar-drawer w-full absolute top-0 left-0 bg-background-color">
+        <ul class="drawer-navbar-list flex flex-col justify-start items-center">
+            
+                
+                    <li class="drawer-navbar-item text-base my-1.5 flex justify-center items-center">
+                        <a class="rounded-3xl py-1.5 px-5 hover:border hover:!text-primary active:!text-primary group active" 
+                        href="/"  >
+                             
+                                
+                                    <i class="fa-regular fa-house"></i>
+                                
+                                HOME
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+                <div class="home-sidebar-container">
+    <div class="sticky-container sticky">
+        
+            
+            <div class="sidebar-content" >
+                <div class="avatar flex justify-center">
+                    <img src="/images/redefine-avatar.svg">
+                </div>
+                <div class="author flex flex-col justify-center my-2.5 mx-0">
+                    <div class="name">The Redefine Team</div>
+                    
+                        <div class="label">Lv2</div>
+                    
+                </div>
+                <div class="statistics">
+                    <a class="item" href="/tags">
+                        <div class="number">0</div>
+                        <div class="label">Tags</div>
+                    </a>
+                    <a class="item" href="/categories">
+                        <div class="number">0</div>
+                        <div class="label">Categories</div>
+                    </a>
+                    <a class="item" href="/archives">
+                        <div class="number">9</div>
+                        <div class="label">Posts</div>
+                    </a>
+                </div>
+            </div>
+        
+
+    </div>
+</div>
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="home-content-container">
+    <ul class="home-article-list">
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2023/10/14/%E5%89%8D%E7%AB%AF%E8%B7%A8%E5%9F%9F/">
+                        
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        什么是跨域？“跨域”（Cross-Origin）指的是在浏览器端，当一个网页的 JavaScript 代码尝试去请求另一个域下的资源时，就会发生跨域问题。对于前后端分离的项目在开发阶段容易发生跨域问题
+为什么跨域？需要明确的是，跨域一般发生在前端，即...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Sat Oct 14 2023 12:12:01 GMT+0800">
+                
+                    2023-10-14
+                
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a href="/2023/10/14/%E5%89%8D%E7%AB%AF%E8%B7%A8%E5%9F%9F/">Read more<span class="seo-reader-text"></span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2023/01/14/Apifox&JSON&token/">
+                        
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        Apifox API 文档、API 调试、API Mock、API 自动化测试一体化协作平台学习：https://www.apifox.cn/help/#_21-%E5%88%86%E9%92%9F%E5%AD%A6%E4%BC%9A-apifox-...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Sat Jan 14 2023 17:02:59 GMT+0800">
+                
+                    2023-01-14
+                
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a href="/2023/01/14/Apifox&JSON&token/">Read more<span class="seo-reader-text"></span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2022/10/29/react-router%20v6/">
+                        
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        
+react-router v6
+路由组件
+BrowserRouter与HashRouter作用：整体结构，用于包裹组件区别：一     path表现形式不一样：HashRouter含#，而BrowserRouter无         例如：loca...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Sat Oct 29 2022 10:52:52 GMT+0800">
+                
+                    2022-10-29
+                
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a href="/2022/10/29/react-router%20v6/">Read more<span class="seo-reader-text"></span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2022/10/02/%E6%B5%8F%E8%A7%88%E5%99%A8%E9%A1%B5%E9%9D%A2%E7%9A%84%E9%98%BB%E5%A1%9E%E6%B8%B2%E6%9F%93/">
+                        
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        浏览器关键渲染路径这部分主要是，浏览器通过网络模块加载得到到HTML文件后的渲染流程
+首先浏览器拿到从服务端返回的html文件是由一堆字节构成的，随后转化为字符，即人能看懂的html代码。再转化为token，就像是符号标签。这里主要依赖html中标签...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Sun Oct 02 2022 11:40:04 GMT+0800">
+                
+                    2022-10-02
+                
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a href="/2022/10/02/%E6%B5%8F%E8%A7%88%E5%99%A8%E9%A1%B5%E9%9D%A2%E7%9A%84%E9%98%BB%E5%A1%9E%E6%B8%B2%E6%9F%93/">Read more<span class="seo-reader-text"></span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2022/05/07/JavaScript%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/">
+                        
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        js垃圾回收一什么是垃圾从生活中的角度可知，垃圾，就是人们不再需要的东西。在js中也一样，垃圾就是不再需要的变量。js通过自动内存管理实现内存分配和闲置资源回收，基本思路就是确定哪个变量不会再被用到了，就释放它占用的内存。
+全局变量在全局作用域下声明...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Sat May 07 2022 22:41:07 GMT+0800">
+                
+                    2022-05-07
+                
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a href="/2022/05/07/JavaScript%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/">Read more<span class="seo-reader-text"></span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2022/04/13/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%B8%A9%E5%9D%91%E8%AE%B0/">
+                        
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        一 react错误 Minified React error #185;原因：render函数不能使用setState()，否则会导致页面死循环上图摘自其他博主
+二 有关Taro.showToast如果只写title的话，最多只展示7个文字如果再加 ...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Wed Apr 13 2022 16:55:19 GMT+0800">
+                
+                    2022-04-13
+                
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a href="/2022/04/13/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%B8%A9%E5%9D%91%E8%AE%B0/">Read more<span class="seo-reader-text"></span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2022/03/18/%E5%85%B3%E4%BA%8Ehttp/">
+                        
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        一 http1 http是无状态协议，自身不对请求和响应之间的通信状态进行保存，这使得http是比较简单的，可以更快处理大量事务，确保协议的可伸缩性。
+2  http用于客户端与服务端之间的通信，一个普通的请求包括：客户端向服务端发出请求，服务端处理...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Fri Mar 18 2022 21:03:00 GMT+0800">
+                
+                    2022-03-18
+                
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a href="/2022/03/18/%E5%85%B3%E4%BA%8Ehttp/">Read more<span class="seo-reader-text"></span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2021/11/26/postName/">
+                        Function(javaScript)
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        #函数的概念及优势概念：简单来说就是封装了一段可被重复执行调用的代码块，是JavaScript编程的基础。优势：让大量代码重复使用，减少重复，同时使子程序间相互隔离。
+#函数的使用（声明、调用）一. 函数的声明：（两种）1.function 函数名（...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Fri Nov 26 2021 22:09:05 GMT+0800">
+                
+                    2021-11-26
+                
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a href="/2021/11/26/postName/">Read more<span class="seo-reader-text">Function(javaScript)</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2021/10/17/hello-world/">
+                        Hello World
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        Welcome to Hexo ! This is your very first post. Check documentation  for more info. If you get any problems when using Hexo, ...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Sun Oct 17 2021 12:13:57 GMT+0800">
+                
+                    2021-10-17
+                
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a href="/2021/10/17/hello-world/">Read more<span class="seo-reader-text">Hello World</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+    </ul>
+
+    <div class="home-paginator">
+        <div class="paginator">
+    <span class="page-number current">1</span>
+</div>
+
+    </div>
+</div>
+
+                    <div class="comment-container pjax"></div>
+                
+
+            </div>
+
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2022</span>
+              -
+            
+            2023&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">The Redefine Team</a>
+        </div>
+        
+            <script data-swup-reload-script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">VISITOR COUNT</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">TOTAL PAGE VIEWS</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a></span>
+            <span class="text-sm lg:block">THEME&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.5.0</a></span>
+        </div>
+        
+        
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+
+</main>
+
+
+    
+<script src="/js/libs/Swup.min.js"></script>
+
+<script src="/js/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/libs/SwupPreloadPlugin.min.js"></script>
+
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
 </script>
 
-</body>
 
+
+
+
+
+
+
+<script src="/js/tools/imageViewer.js" type="module"></script>
+
+<script src="/js/utils.js" type="module"></script>
+
+<script src="/js/main.js" type="module"></script>
+
+<script src="/js/layouts/navbarShrink.js" type="module"></script>
+
+<script src="/js/tools/scrollTopBottom.js" type="module"></script>
+
+<script src="/js/tools/lightDarkSwitch.js" type="module"></script>
+
+<script src="/js/layouts/categoryList.js" type="module"></script>
+
+
+
+
+
+    
+<script src="/js/tools/codeBlock.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/layouts/lazyload.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/tools/runtime.js"></script>
+
+    
+<script src="/js/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/js/libs/Typed.min.js"></script>
+
+  
+<script src="/js/plugins/typed.js" type="module"></script>
+
+
+
+
+
+
+
+<div class="post-scripts" data-swup-reload-script>
+    
+        
+<script src="/js/libs/anime.min.js"></script>
+
+        
+<script src="/js/tools/tocToggle.js" type="module"></script>
+
+<script src="/js/layouts/toc.js" type="module"></script>
+
+<script src="/js/plugins/tabs.js" type="module"></script>
+
+    
+</div>
+
+
+</body>
 </html>
